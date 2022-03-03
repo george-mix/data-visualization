@@ -1,10 +1,12 @@
 import React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
 
 const App: React.FC = () => {
 	return (
-		<div>
+		<>
+			<CssBaseline />
 			<h1>App</h1>
-		</div>
+		</>
 	);
 };
 
