@@ -1,10 +1,10 @@
 import React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
+import { Navbar } from './components/Navbat';
 
 const App: React.FC = () => {
 	return (
 		<>
-			<CssBaseline />
+			<Navbar/>
 			<h1>App</h1>
 		</>
 	);
