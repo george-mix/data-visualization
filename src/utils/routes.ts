@@ -1,7 +1,8 @@
 import {About} from '@pages/About';
 import {Home} from '@pages/Home';
+import {AppRoute} from './interfaces';
 
-export const mainRoutes = [
+export const mainRoutes: AppRoute[] = [
 	{
 		name: 'Home',
 		path: '/',

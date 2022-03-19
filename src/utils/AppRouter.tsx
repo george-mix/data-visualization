@@ -1,5 +1,6 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
+import {NotFound} from '@pages/NotFound';
 import {mainRoutes} from './routes';
 
 export const AppRouter: React.FC = () => (
@@ -11,5 +12,6 @@ export const AppRouter: React.FC = () => (
 				element={<route.element />}
 			/>
 		))}
+		<Route path="*" element={<NotFound />} />
 	</Routes>
 );
