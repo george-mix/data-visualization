@@ -2,8 +2,8 @@
 import {useState, useEffect} from 'react';
 import {csv} from 'd3';
 
-export const useCSV = (url: string) => {
-	const [data, setData] = useState(null);
+export const useCSV = <T>(url: string) => {
+	const [data, setData] = useState<Array<T> | []>([]);
 
 	useEffect(() => {
 		csv(url).then((data: any) => {

@@ -20,5 +20,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "capitalized-comments": ["error", "never"],
+        "no-implicit-coercion": 0
     }
 }

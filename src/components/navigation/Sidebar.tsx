@@ -1,8 +1,7 @@
 import React from 'react';
-import {Box, Drawer, Divider, List, ListItem, ListItemText} from '@mui/material';
-import {Link} from 'react-router-dom';
-import {mainRoutes} from '@utils/routes';
-import {AppRoute} from '@utils/interfaces';
+import {Box, Drawer, Divider} from '@mui/material';
+import {articleRoutes, mainRoutes} from '@utils/routes';
+import {NavList} from './NavList';
 
 interface SidebarProps {
     sidebar: boolean;
@@ -20,23 +19,10 @@ export const Sidebar: React.FC<SidebarProps> = ({sidebar, toggleSidebar}) => (
 			onClick={toggleSidebar}
 			onKeyDown={toggleSidebar}
 		>
-			<SideArticleList routes={mainRoutes}/>
+			<NavList routes={mainRoutes}/>
 			<Divider />
-            Articles
+			<NavList routes={articleRoutes} />
 		</Box>
 	</Drawer>
 );
 
-const SideArticleList: React.FC<{
-	routes: AppRoute[]
-}> = ({routes}) => (
-	<List>
-		{routes.map(route => (
-			<ListItem button key={route.name}>
-				<Link to={route.path}>
-					<ListItemText primary={route.name} />
-				</Link>
-			</ListItem>
-		))}
-	</List>
-);
