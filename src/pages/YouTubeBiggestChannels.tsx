@@ -2,6 +2,7 @@ import React from 'react';
 import {useCSV} from '@utils/hooks/useCSV';
 import {TopTenYTChannelsChart} from '@components/charts/TopTenYTChannelsChart';
 import {ParsedYouTubeCSV, YouTubeCSV} from '@utils/commonTypes';
+import {LanguagePercentageChart} from '@components/charts/LanguagePercentageChart';
 
 export const YouTubeBiggestChannels: React.FC = () => {
 	const url = import.meta.env.VITE_YOUTUBE_CHANNELS_DATA_SOURCE;
@@ -16,13 +17,14 @@ export const YouTubeBiggestChannels: React.FC = () => {
 		contentCategory: d['Content category'],
 		country: d.Country,
 		primaryLanguage: d['Primary language(s)'],
-		subscribers: +d['Subscribers (millions)'],
+		subscribers: Math.round(+d['Subscribers (millions)']),
 	}));
 
 	return (
 		<>
 			YouTube Channels
 			<TopTenYTChannelsChart data={parsedData} />
+			<LanguagePercentageChart data={parsedData} />
 		</>
 	);
 };
