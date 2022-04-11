@@ -7,7 +7,7 @@ export interface AppRoute {
     element: React.FC;
 }
 
-export interface YouTubeCSV {
+export interface YouTubeParsedCSVData {
 	Channel: string;
     'Content category': string;
     Country: string;
@@ -15,7 +15,7 @@ export interface YouTubeCSV {
 	'Subscribers (millions)': string;
 }
 
-export interface ParsedYouTubeCSV {
+export interface YouTubeChannelData {
     channelName: string;
     contentCategory: string;
     country: string;

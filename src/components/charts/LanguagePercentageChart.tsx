@@ -1,6 +1,6 @@
 import React from 'react';
 import {pie, sum, flatRollup, schemeSet3, arc, scaleOrdinal, PieArcDatum, Arc, ScaleOrdinal} from 'd3';
-import {ParsedYouTubeCSV} from '@utils/commonTypes';
+import {YouTubeChannelData} from '@utils/commonTypes';
 
 interface SubscriberLanguage {
 	primaryLanguage: string,
@@ -13,7 +13,7 @@ const margin = {top: 100, right: 100, bottom: 20, left: 20};
 const radius = Math.min(width - margin.left - margin.right, height - margin.top - margin.bottom) / 2;
 
 export const LanguagePercentageChart: React.FC<{
-	data: ParsedYouTubeCSV[],
+	data: YouTubeChannelData[],
 }> = ({data}) => {
 	const colors = scaleOrdinal(schemeSet3);
 

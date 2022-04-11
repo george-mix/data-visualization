@@ -1,9 +1,9 @@
 import React from 'react';
 import {max, scaleBand, scaleLinear} from 'd3';
-import {ParsedYouTubeCSV} from '@utils/commonTypes';
+import {YouTubeChannelData} from '@utils/commonTypes';
 
 export const TopTenYTChannelsChart: React.FC<{
-    data: ParsedYouTubeCSV[];
+    data: YouTubeChannelData[];
 }> = ({data}) => {
 	const width = 960;
 	const height = 440;
@@ -11,15 +11,14 @@ export const TopTenYTChannelsChart: React.FC<{
 	const innerHeight = height - margin.top - margin.bottom;
 	const innerWidth = width - margin.right - margin.left;
 
-	const topTen: ParsedYouTubeCSV[] = data.slice(0, 10);
-	console.log('here', topTen);
+	const topTenChannels: YouTubeChannelData[] = data.slice(0, 10);
 
-	const yValue = (d: ParsedYouTubeCSV) => d.channelName;
-	const xValue = (d: ParsedYouTubeCSV) => d.subscribers;
-	const maxSubsribers = max(topTen, xValue) || 0;
+	const yValue = (d: YouTubeChannelData) => d.channelName;
+	const xValue = (d: YouTubeChannelData) => d.subscribers;
+	const maxSubsribers = max(topTenChannels, xValue) || 0;
 
 	const yScale = scaleBand()
-		.domain(topTen.map(yValue))
+		.domain(topTenChannels.map(yValue))
 		.range([0, innerHeight])
 		.paddingInner(0.15);
 
@@ -50,7 +49,7 @@ export const TopTenYTChannelsChart: React.FC<{
 						</text>
 					</g>
 				))}
-				{topTen.map((d: ParsedYouTubeCSV) => <rect
+				{topTenChannels.map((d: YouTubeChannelData) => <rect
 					x={0}
 					y={yScale(d.channelName)}
 					width={xScale(d.subscribers)}
