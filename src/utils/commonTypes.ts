@@ -1,4 +1,5 @@
 import React from 'react';
+import {MultiLineString, Feature, FeatureCollection, GeoJsonProperties, Geometry} from 'geojson';
 
 // interfaces
 export interface AppRoute {
@@ -21,4 +22,9 @@ export interface YouTubeChannelData {
     country: string;
     primaryLanguage: string;
     subscribers: number;
+}
+
+export interface WorldAtlas {
+	countries: Feature<Geometry, GeoJsonProperties> | FeatureCollection<Geometry, GeoJsonProperties>;
+	interiors: MultiLineString;
 }
