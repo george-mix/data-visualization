@@ -21,6 +21,8 @@
     ],
     "rules": {
         "capitalized-comments": ["error", "never"],
-        "no-implicit-coercion": 0
+        "no-implicit-coercion": 0,
+        "function-paren-newline": ["error", "multiline"],
+        "arrow-parens": ["error", "always"]
     }
 }

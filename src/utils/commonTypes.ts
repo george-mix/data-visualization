@@ -9,11 +9,11 @@ export interface AppRoute {
 }
 
 export interface YouTubeParsedCSVData {
-	Channel: string;
-    'Content category': string;
+    Channel: string;
     Country: string;
+    'Content category': string;
     'Primary language(s)': string;
-	'Subscribers (millions)': string;
+    'Subscribers (millions)': string;
 }
 
 export interface YouTubeChannelData {
@@ -25,6 +25,6 @@ export interface YouTubeChannelData {
 }
 
 export interface WorldAtlas {
-	countries: Feature<Geometry, GeoJsonProperties> | FeatureCollection<Geometry, GeoJsonProperties>;
-	interiors: MultiLineString;
+    countries: Feature<Geometry, GeoJsonProperties> | FeatureCollection<Geometry, GeoJsonProperties>;
+    interiors: MultiLineString;
 }
