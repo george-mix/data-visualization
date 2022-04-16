@@ -9,7 +9,7 @@ export const useWorldAtlas = (jsonUrl: string) => {
 
 	useEffect(() => {
 		json<Topology>(jsonUrl)
-			.then(topology => {
+			.then((topology) => {
 				if (topology) {
 					const {countries} = topology.objects;
 					setData({
@@ -22,7 +22,7 @@ export const useWorldAtlas = (jsonUrl: string) => {
 					});
 				}
 			})
-			.catch(error => {
+			.catch((error) => {
 				console.warn(error.name, error.message);
 				setData(null);
 			});

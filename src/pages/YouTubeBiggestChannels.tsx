@@ -1,8 +1,9 @@
 import React from 'react';
 import {useParseRemoteCSV} from '@utils/hooks/useParseRemoteCSV';
 import {TopTenYTChannelsChart} from '@components/charts/TopTenYTChannelsChart';
-import {YouTubeChannelData, YouTubeParsedCSVData} from '@utils/commonTypes';
 import {LanguagePercentageChart} from '@components/charts/LanguagePercentageChart';
+import {ChannelQuantityChoroplethMap} from '@components/charts/ChannelQuantityChoroplethMap';
+import {YouTubeChannelData, YouTubeParsedCSVData} from '@utils/commonTypes';
 
 export const YouTubeBiggestChannels: React.FC = () => {
 	const url = import.meta.env.VITE_YOUTUBE_CHANNELS_DATA_SOURCE;
@@ -12,7 +13,7 @@ export const YouTubeBiggestChannels: React.FC = () => {
 		return <pre>Loading...</pre>;
 	}
 
-	const parsedYouTubeData: YouTubeChannelData[] = youtubeData.map(d => ({
+	const parsedYouTubeData: YouTubeChannelData[] = youtubeData.map((d) => ({
 		channelName: d.Channel,
 		contentCategory: d['Content category'],
 		country: d.Country,
@@ -25,6 +26,7 @@ export const YouTubeBiggestChannels: React.FC = () => {
 			YouTube Channels
 			<TopTenYTChannelsChart data={parsedYouTubeData} />
 			<LanguagePercentageChart data={parsedYouTubeData} />
+			<ChannelQuantityChoroplethMap data={parsedYouTubeData} />
 		</>
 	);
 };
