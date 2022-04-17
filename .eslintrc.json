@@ -20,9 +20,24 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "sort-imports": ["error", {
+                "ignoreCase": false,
+                "ignoreDeclarationSort": true,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": ["single", "all", "multiple", "none"],
+                "allowSeparatedGroups": true
+            }
+        ],
+        "indent": "off",
+        "@typescript-eslint/indent": ["error", 2],
         "capitalized-comments": ["error", "never"],
-        "no-implicit-coercion": 0,
+        "no-implicit-coercion": "off",
         "function-paren-newline": ["error", "multiline"],
-        "arrow-parens": ["error", "always"]
+        "arrow-parens": ["error", "always"],
+        "no-duplicate-imports": "error",
+        "no-plusplus": "error",
+        "no-nested-ternary": "error",
+        "no-unneeded-ternary": "error",
+        "arrow-body-style": ["error", "as-needed"]
     }
 }

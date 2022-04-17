@@ -4,10 +4,10 @@ import {AppNavigation} from '@components/navigation/AppNavigation';
 import {AppRouter} from '@utils/AppRouter';
 
 const App: React.FC = () => (
-	<Router>
-		<AppNavigation />
-		<AppRouter />
-	</Router>
+  <Router>
+    <AppNavigation />
+    <AppRouter />
+  </Router>
 );
 
 export default App;
