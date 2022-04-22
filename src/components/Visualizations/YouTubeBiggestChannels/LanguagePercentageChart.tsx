@@ -1,6 +1,15 @@
 import React from 'react';
-import {Arc, PieArcDatum, ScaleOrdinal, arc, flatRollup, pie, scaleOrdinal, schemeSet3, sum} from 'd3';
+import {
+  PieArcDatum,
+  arc,
+  flatRollup,
+  pie,
+  scaleOrdinal,
+  schemeSet3,
+  sum,
+} from 'd3';
 import {YouTubeChannelData} from '@utils/commonTypes';
+import {PieArc} from '@components/ChartElements/PieArc';
 
 interface SubscriberLanguage {
   primaryLanguage: string,
@@ -55,25 +64,3 @@ export const LanguagePercentageChart: React.FC<{
   );
 };
 
-type ArcProps<T> = {
-  data: PieArcDatum<T>,
-  index: number,
-  createArc: Arc<any, PieArcDatum<T>>,
-  colors: ScaleOrdinal<string, string, never>,
-  text: string
-}
-
-const PieArc = <T, >({data, index, createArc, colors, text}: ArcProps<T>) => (
-  <g key={index}>
-    <path d={createArc(data) || undefined} fill={colors(index.toString())} />
-    <text
-      transform={`translate(${createArc.centroid(data)})`}
-      textAnchor="middle"
-      alignmentBaseline="middle"
-      fill="black"
-      fontSize="16"
-    >
-      {text}
-    </text>
-  </g>
-);

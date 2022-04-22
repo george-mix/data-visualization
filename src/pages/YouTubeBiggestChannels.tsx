@@ -1,8 +1,8 @@
 import React from 'react';
 import {useParseRemoteCSV} from '@utils/hooks/useParseRemoteCSV';
-import {TopTenChannelsChart} from '@charts/YouTubeBiggestChannels/TopTenChannelsChart';
-import {LanguagePercentageChart} from '@charts/YouTubeBiggestChannels/LanguagePercentageChart';
-import {ChannelQuantityChoroplethMap} from '@charts/YouTubeBiggestChannels/ChannelQuantityChoroplethMap';
+import {TopTenChannelsChart} from '@visualizations/YouTubeBiggestChannels/TopTenChannelsChart';
+import {LanguagePercentageChart} from '@visualizations/YouTubeBiggestChannels/LanguagePercentageChart';
+import {ChannelQuantityChoroplethMap} from '@visualizations/YouTubeBiggestChannels/ChannelQuantityChoroplethMap';
 import {YouTubeChannelData, YouTubeParsedCSVData} from '@utils/commonTypes';
 
 export const YouTubeBiggestChannels: React.FC = () => {

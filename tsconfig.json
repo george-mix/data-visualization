@@ -18,7 +18,7 @@
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["components/*"],
-      "@charts/*": ["components/Charts/*"],
+      "@visualizations/*": ["components/Visualizations/*"],
       "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"],
     }
