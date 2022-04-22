@@ -2,7 +2,7 @@ import React from 'react';
 import {max, scaleBand, scaleLinear} from 'd3';
 import {YouTubeChannelData} from '@utils/commonTypes';
 
-export const TopTenYTChannelsChart: React.FC<{
+export const TopTenChannelsChart: React.FC<{
   data: YouTubeChannelData[];
 }> = ({data}) => {
   const width = 960;
