@@ -6,12 +6,12 @@ type PieArcProps<T> = {
   index: number,
   createArc: Arc<any, PieArcDatum<T>>,
   colors: ScaleOrdinal<string, string, never>,
-  text: string
+  text?: string
 }
 
 export const PieArc = <T, >({data, index, createArc, colors, text}: PieArcProps<T>) => (
   <g key={index}>
-    <path d={createArc(data) || undefined} fill={colors(index.toString())} />
+    <path stroke="white" strokeWidth={2} d={createArc(data) || undefined} fill={colors(index.toString())} />
     <text
       transform={`translate(${createArc.centroid(data)})`}
       textAnchor="middle"
