@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, Divider, Drawer} from '@mui/material';
 import {articleRoutes, mainRoutes} from '@utils/routes';
 import {NavList} from './NavList';
+import {LanguageSelector} from '@components/Internationalization/LanguageSelector';
 
 interface SidebarProps {
   sidebar: boolean;
@@ -13,9 +14,10 @@ export const Sidebar: React.FC<SidebarProps> = ({sidebar, toggleSidebar}) => (
     open={sidebar}
     onClose={toggleSidebar}
   >
+    <LanguageSelector />
     <Box
       sx={{width: 250}}
-      role="presentation"
+      role="navigation"
       onClick={toggleSidebar}
       onKeyDown={toggleSidebar}
     >
