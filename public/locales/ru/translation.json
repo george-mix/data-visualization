@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Начальная страница"
+  },
+  "about": {
+    "title": "О нас"
+  },
+  "youtube-channels": {
+    "title": "Самые популярные YouTube каналы"
+  },
+  "james-bond-films": {
+    "title": "Фильмы о Джеймсе Бонде"
+  }
+}

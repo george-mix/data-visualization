@@ -11,7 +11,7 @@ export const Navbar: React.FC<NavbarProps> = ({toggleSidebar}) => (
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
-                        dataviz
+          dataviz
         </Typography>
         <IconButton
           size="large"

@@ -6,12 +6,12 @@ import {AppRoute} from './commonTypes';
 
 export const mainRoutes: AppRoute[] = [
   {
-    name: 'Home',
+    name: 'home.title',
     path: '/',
     element: Home,
   },
   {
-    name: 'About',
+    name: 'about.title',
     path: '/about',
     element: About,
   },
@@ -19,12 +19,12 @@ export const mainRoutes: AppRoute[] = [
 
 export const articleRoutes: AppRoute[] = [
   {
-    name: 'Most Popular YouTube Channels',
+    name: 'youtube-channels.title',
     path: '/youtube-biggest-channels',
     element: YouTubeBiggestChannels,
   },
   {
-    name: 'James Bond Films',
+    name: 'james-bond-films.title',
     path: '/james-bond-films',
     element: JamesBondFilms,
   },
