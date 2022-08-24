@@ -21,6 +21,7 @@
       "@visualizations/*": ["components/Visualizations/*"],
       "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"],
+      "@store/*": ["store/*"],
     }
   },
   "include": ["src"],

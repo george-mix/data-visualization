@@ -1,5 +1,50 @@
 import React from 'react';
 import {CssBaseline, ThemeProvider, createTheme} from '@mui/material';
+import {useSelector} from 'react-redux';
+import {themeModeSelector} from '@store/theme/themeSelectors';
+
+const typography = {
+  body2: {
+    fontFamily: 'Lato',
+  },
+  subtitle1: {
+    fontFamily: 'Lato',
+  },
+};
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    text: {
+      primary: '#fff9f5',
+    },
+    primary: {
+      main: '#f7501f',
+    },
+    secondary: {
+      main: '#af4627',
+      contrastText: '#f9f0f0',
+    },
+    error: {
+      main: '#f60867',
+    },
+    warning: {
+      main: '#ffc375',
+    },
+    info: {
+      main: '#6c3c2e',
+    },
+    success: {
+      main: '#63af13',
+    },
+    divider: 'rgba(198,205,207,0.22)',
+    background: {
+      default: '#121b24',
+      paper: '#000704',
+    },
+  },
+  typography,
+});
 
 const lightTheme = createTheme({
   palette: {
@@ -28,19 +73,17 @@ const lightTheme = createTheme({
     },
     divider: 'rgba(87,55,59,0.29)',
   },
-  typography: {
-    body2: {
-      fontFamily: 'Lato',
-    },
-    subtitle1: {
-      fontFamily: 'Lato',
-    },
-  },
+  typography,
 });
 
-export const StyleProvider: React.FC = ({children}) => (
-  <ThemeProvider theme={lightTheme}>
-    <CssBaseline />
-    {children}
-  </ThemeProvider>
-);
+export const StyleProvider: React.FC = ({children}) => {
+  const themeMode = useSelector(themeModeSelector);
+  const theme = themeMode === 'light' ? lightTheme : darkTheme;
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+  );
+};
