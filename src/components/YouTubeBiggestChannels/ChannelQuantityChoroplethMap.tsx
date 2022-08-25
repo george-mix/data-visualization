@@ -1,18 +1,20 @@
 import React from 'react';
-import {useWorldAtlas} from '@utils/hooks/useWorldAtlas';
 import {
   geoNaturalEarth1,
   group,
   interpolateYlOrRd,
   scaleSequential,
 } from 'd3';
-import {YouTubeChannelData} from '@utils/commonTypes';
+import {useWorldAtlas} from '@utils/hooks/useWorldAtlas';
+import {YouTubeChannelData} from '@common/interfaces';
 import {ChoroplethMap} from '@components/ChartElements/ChoroplethMap';
 const worldAtlasUrl = import.meta.env.VITE_WORLD_ATLAS_JSON_URL_110M;
 
-export const ChannelQuantityChoroplethMap: React.FC<{
-  data: YouTubeChannelData[]
-}> = ({data}) => {
+type ChartProps = {
+  data: YouTubeChannelData[];
+}
+
+export const ChannelQuantityChoroplethMap: React.FC<ChartProps> = ({data}) => {
   const width = 960;
   const height = 500;
   const worldAtlas = useWorldAtlas(worldAtlasUrl);

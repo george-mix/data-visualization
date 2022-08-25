@@ -7,7 +7,7 @@ import {
   geoPath,
 } from 'd3';
 import {FeatureCollection} from 'geojson';
-import {WorldAtlas} from '@utils/commonTypes';
+import {WorldAtlas} from '@common/interfaces';
 
 type ChoroplethMapProps<T> = {
   worldAtlas: WorldAtlas,

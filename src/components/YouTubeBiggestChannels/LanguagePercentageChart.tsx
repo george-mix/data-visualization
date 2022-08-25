@@ -8,7 +8,7 @@ import {
   schemeSet3,
   sum,
 } from 'd3';
-import {YouTubeChannelData} from '@utils/commonTypes';
+import {YouTubeChannelData} from '@common/interfaces';
 import {PieArc} from '@components/ChartElements/PieArc';
 
 interface SubscriberLanguage {
@@ -21,9 +21,11 @@ const height = 450;
 const margin = {top: 100, right: 100, bottom: 20, left: 20};
 const radius = Math.min(width - margin.left - margin.right, height - margin.top - margin.bottom) / 2;
 
-export const LanguagePercentageChart: React.FC<{
-  data: YouTubeChannelData[],
-}> = ({data}) => {
+type ChartProps = {
+  data: YouTubeChannelData[];
+}
+
+export const LanguagePercentageChart: React.FC<ChartProps> = ({data}) => {
   const colors = scaleOrdinal(schemeSet3);
 
   const languageData: SubscriberLanguage[] = flatRollup(

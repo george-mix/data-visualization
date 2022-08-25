@@ -2,7 +2,7 @@ import {About} from '@pages/About';
 import {Home} from '@pages/Home';
 import {JamesBondFilms} from '@pages/JamesBondFilms';
 import {YouTubeBiggestChannels} from '@pages/YouTubeBiggestChannels';
-import {AppRoute} from './commonTypes';
+import {AppRoute} from '@common/interfaces';
 
 export const mainRoutes: AppRoute[] = [
   {

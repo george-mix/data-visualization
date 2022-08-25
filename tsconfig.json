@@ -18,10 +18,11 @@
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["components/*"],
-      "@visualizations/*": ["components/Visualizations/*"],
       "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"],
+      "@common/*": ["utils/common/*"],
       "@store/*": ["store/*"],
+      "@router/*": ["router/*"],
     }
   },
   "include": ["src"],

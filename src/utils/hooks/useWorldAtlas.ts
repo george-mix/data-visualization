@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import {json} from 'd3';
 import {feature, mesh} from 'topojson';
 import {GeometryObject, Topology} from 'topojson-specification';
-import {WorldAtlas} from '@utils/commonTypes';
+import {WorldAtlas} from '@common/interfaces';
 
 export const useWorldAtlas = (jsonUrl: string) => {
   const [data, setData] = useState<WorldAtlas | null>(null);

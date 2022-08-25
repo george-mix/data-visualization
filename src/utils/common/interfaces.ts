@@ -7,12 +7,6 @@ import {
   MultiLineString,
 } from 'geojson';
 
-// types
-export type KeysOfType<T, V> = keyof {
-  [P in keyof T as T[P] extends V? P: never]: any
-}
-
-// interfaces
 export interface AppRoute {
   name: string;
   path: string;

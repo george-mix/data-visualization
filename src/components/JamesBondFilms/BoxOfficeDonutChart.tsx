@@ -9,7 +9,8 @@ import {
   schemeSet3,
   sum,
 } from 'd3';
-import {JamesBondFilmData, KeysOfType} from '@utils/commonTypes';
+import {KeysOfType} from '@common/types';
+import {JamesBondFilmData} from '@common/interfaces';
 import {PieArc} from '@components/ChartElements/PieArc';
 
 interface KeyPersonTotalBoxOffice {
@@ -22,9 +23,11 @@ const height = 450;
 const margin = {top: 100, right: 100, bottom: 20, left: 20};
 const radius = Math.min(width - margin.left - margin.right, height - margin.top - margin.bottom) / 2;
 
-export const BoxOfficeDonutChart: React.FC<{
-  data: JamesBondFilmData[],
-}> = ({data}) => {
+type ChartProps = {
+  data: JamesBondFilmData[];
+}
+
+export const BoxOfficeDonutChart: React.FC<ChartProps> = ({data}) => {
   const [
     personType,
     setPersonType,

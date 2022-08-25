@@ -1,8 +1,8 @@
 import React from 'react';
 import {useParseRemoteCSV} from '@utils/hooks/useParseRemoteCSV';
-import {JamesBondFilmData, JamesBondParsedCSVData} from '@utils/commonTypes';
-import {BoxOfficeDonutChart} from '@components/Visualizations/JamesBondFilms/BoxOfficeDonutChart';
-import {PopularityTimeline} from '@components/Visualizations/JamesBondFilms/PopularityTimeline';
+import {JamesBondFilmData, JamesBondParsedCSVData} from '@common/interfaces';
+import {BoxOfficeDonutChart} from '@components/JamesBondFilms/BoxOfficeDonutChart';
+import {PopularityTimeline} from '@components/JamesBondFilms/PopularityTimeline';
 
 export const JamesBondFilms: React.FC = () => {
   const url = import.meta.env.VITE_JAMES_BOND_FILMS_DATA_SOURCE;

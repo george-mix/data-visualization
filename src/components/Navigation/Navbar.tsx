@@ -8,9 +8,9 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({toggleSidebar}) => (
   <Box sx={{flexGrow: 1}}>
-    <AppBar position="static">
+    <AppBar sx={{bgcolor: 'background.default'}} position="static">
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
+        <Typography variant="h6" component="div" sx={{flexGrow: 1, color: 'text.primary'}}>
           dataviz
         </Typography>
         <IconButton
@@ -18,7 +18,7 @@ export const Navbar: React.FC<NavbarProps> = ({toggleSidebar}) => (
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{mr: 2}}
+          sx={{mr: 2, color: 'text.primary'}}
           onClick={toggleSidebar}
         >
           <MenuIcon />

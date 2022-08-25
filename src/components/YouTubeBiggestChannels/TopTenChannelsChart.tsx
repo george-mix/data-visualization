@@ -1,10 +1,12 @@
 import React from 'react';
 import {max, scaleBand, scaleLinear} from 'd3';
-import {YouTubeChannelData} from '@utils/commonTypes';
+import {YouTubeChannelData} from '@common/interfaces';
 
-export const TopTenChannelsChart: React.FC<{
+type ChartProps = {
   data: YouTubeChannelData[];
-}> = ({data}) => {
+}
+
+export const TopTenChannelsChart: React.FC<ChartProps> = ({data}) => {
   const width = 960;
   const height = 440;
   const margin = {top: 20, right: 80, bottom: 20, left: 250};

@@ -1,6 +1,6 @@
-import {JamesBondFilmData} from '@utils/commonTypes';
-import {extent, line, scaleLinear, curveCatmullRom as testcurve} from 'd3';
 import React from 'react';
+import {extent, line, scaleLinear, curveCatmullRom as testcurve} from 'd3';
+import {JamesBondFilmData} from '@common/interfaces';
 
 const width = 960;
 const height = 500;
@@ -10,9 +10,11 @@ const yAxisLabelOffset = 45;
 const innerHeight = height - margin.top - margin.bottom;
 const innerWidth = width - margin.right - margin.left;
 
-export const PopularityTimeline: React.FC<{
-  data: JamesBondFilmData[]
-}> = ({data}) => {
+type ChartProps = {
+  data: JamesBondFilmData[];
+}
+
+export const PopularityTimeline: React.FC<ChartProps> = ({data}) => {
   console.log(innerHeight, innerWidth);
 
   const xValue = (d: JamesBondFilmData): number => d.year;
