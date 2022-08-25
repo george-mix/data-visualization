@@ -9,9 +9,13 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    load: 'languageOnly',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
+    },
+    detection: {
+      caches: [],
     },
   });
 

@@ -15,7 +15,7 @@ export const LanguageSelector: React.FC = () => {
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
-        value={i18n.language.toUpperCase()}
+        value={i18n.resolvedLanguage.toUpperCase()}
         displayEmpty
         onChange={handleChange}
       >
