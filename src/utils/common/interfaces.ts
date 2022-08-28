@@ -6,6 +6,8 @@ import {
   Geometry,
   MultiLineString,
 } from 'geojson';
+import {OverridableComponent} from '@mui/material/OverridableComponent';
+import {SvgIconTypeMap} from '@mui/material';
 
 export interface AppRoute {
   name: string;
@@ -16,6 +18,14 @@ export interface AppRoute {
 export interface WorldAtlas {
   countries: Feature<Geometry, GeoJsonProperties> | FeatureCollection<Geometry, GeoJsonProperties>;
   interiors: MultiLineString;
+}
+
+export interface SocialMedia {
+  name: string;
+  link: string;
+  icon: OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & {
+    muiName: string;
+  };
 }
 
 // article data interfaces
