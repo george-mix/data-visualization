@@ -1,11 +1,10 @@
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
-import {AppNavigation} from '@components/Navigation/AppNavigation';
-import {AppRoutes} from '@router/AppRoutes';
 import {TranslationProvider} from '@utils/providers/TranslationProvider';
 import {StyleProvider} from '@utils/providers/StyleProvider';
 import {StoreProvider} from '@utils/providers/StoreProvider';
 import {SuspenseProvider} from '@utils/providers/SuspenseProvider';
+import {AppLayout} from '@layouts/AppLayout';
 
 const App: React.FC = () => (
   <StoreProvider>
@@ -13,8 +12,7 @@ const App: React.FC = () => (
       <SuspenseProvider>
         <TranslationProvider>
           <Router>
-            <AppNavigation />
-            <AppRoutes />
+            <AppLayout />
           </Router>
         </TranslationProvider>
       </SuspenseProvider>

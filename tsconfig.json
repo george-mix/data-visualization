@@ -23,6 +23,7 @@
       "@common/*": ["utils/common/*"],
       "@store/*": ["store/*"],
       "@router/*": ["router/*"],
+      "@layouts/*": ["layouts/*"],
     }
   },
   "include": ["src"],
