@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {AppNavigation} from '@components/Navigation/AppNavigation';
-import {AppRouter} from '@router/AppRouter';
+import {AppRoutes} from '@router/AppRoutes';
 import {TranslationProvider} from '@utils/providers/TranslationProvider';
 import {StyleProvider} from '@utils/providers/StyleProvider';
 import {StoreProvider} from '@utils/providers/StoreProvider';
@@ -14,7 +14,7 @@ const App: React.FC = () => (
         <TranslationProvider>
           <Router>
             <AppNavigation />
-            <AppRouter />
+            <AppRoutes />
           </Router>
         </TranslationProvider>
       </SuspenseProvider>
