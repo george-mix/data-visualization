@@ -28,6 +28,13 @@ export interface SocialMedia {
   };
 }
 
+export interface ArticleInfo {
+  title: string;
+  teaser: string;
+  image: string;
+  path: string;
+}
+
 // article data interfaces
 export interface YouTubeParsedCSVData {
   Channel: string;

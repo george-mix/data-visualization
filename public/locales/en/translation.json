@@ -1,4 +1,7 @@
 {
+  "common": {
+    "read-more": "Read more"
+  },
   "home": {
     "title": "Home",
     "hero-section": {
@@ -13,9 +16,11 @@
     "title": "About"
   },
   "youtube-channels": {
-    "title": "Most Popular YouTube Channels"
+    "title": "Most Popular YouTube Channels",
+    "teaser": "Top 50 largest channels by the number of subscribers. Comparison by language, country and content category."
   },
   "james-bond-films": {
-    "title": "James Bond Films"
+    "title": "James Bond Films",
+    "teaser": "Comparison of all films about Agent 007 by budget spent and box office. Let's take a look at the most popular actor, director and most successful film."
   }
 }
