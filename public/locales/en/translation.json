@@ -1,6 +1,8 @@
 {
   "common": {
-    "read-more": "Read more"
+    "read-more": "Read more",
+    "contacts": "Contacts",
+    "pages": "Pages"
   },
   "home": {
     "title": "Home",
