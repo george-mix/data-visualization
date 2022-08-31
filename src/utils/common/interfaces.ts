@@ -35,6 +35,11 @@ export interface ArticleInfo {
   path: string;
 }
 
+export interface ProjectGoal {
+  header: string;
+  description: string;
+}
+
 // article data interfaces
 export interface YouTubeParsedCSVData {
   Channel: string;

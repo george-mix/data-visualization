@@ -15,7 +15,23 @@
     }
   },
   "about": {
-    "title": "About"
+    "title": "About",
+    "goals": {
+      "header": "This website is a pet project created with the following goals in mind",
+      "learn-d3": {
+        "header": "Learn to manipulate SVG with D3.js",
+        "description": "There are many libraries that allow you to create SVG charts, but D3 is the most famous of them. D3 can give more control over the visualizations you plan to create, has a large community and infrastructure."
+      },
+      "combine-d3-and-jsx": {
+        "header": "Learn to combine D3.js with JSX",
+        "description": "For some reason, most of the D3 tutorials and examples use the imperative chaining syntax. But nowadays web developers gravitate towards using a declarative approach (React, Vue). It turns out you can use D3 declaratively as well. Therefore, one of the goals of creating the project was to learn how to combine two wonderful tools."
+      },
+      "compare-data": {
+        "header": "Visualize and compare intresting data",
+        "description": "Can't tell for sure if it's a 'goal' or not. I just love to compare things 😉"
+      }
+    },
+    "technologies": "Stack of technologies used in the process"
   },
   "youtube-channels": {
     "title": "Most Popular YouTube Channels",
