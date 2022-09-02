@@ -5,18 +5,21 @@ import {StyleProvider} from '@utils/providers/StyleProvider';
 import {StoreProvider} from '@utils/providers/StoreProvider';
 import {SuspenseProvider} from '@utils/providers/SuspenseProvider';
 import {AppLayout} from '@layouts/AppLayout';
+import {ServerStateProvider} from '@utils/providers/ServerStateProvider';
 
 const App: React.FC = () => (
   <StoreProvider>
-    <StyleProvider>
-      <SuspenseProvider>
-        <TranslationProvider>
-          <Router>
-            <AppLayout />
-          </Router>
-        </TranslationProvider>
-      </SuspenseProvider>
-    </StyleProvider>
+    <ServerStateProvider>
+      <StyleProvider>
+        <SuspenseProvider>
+          <TranslationProvider>
+            <Router>
+              <AppLayout />
+            </Router>
+          </TranslationProvider>
+        </SuspenseProvider>
+      </StyleProvider>
+    </ServerStateProvider>
   </StoreProvider>
 );
 
