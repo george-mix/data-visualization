@@ -8,7 +8,7 @@ interface ImportMetaEnv {
   readonly VITE_EMAIL_LINK: string;
   readonly VITE_GITHUB_GISTS_BASE_URL: string;
   readonly VITE_YOUTUBE_CHANNELS_DATA_PATH: string;
-  readonly VITE_JAMES_BOND_FILMS_DATA_SOURCE: string;
+  readonly VITE_JAMES_BOND_FILMS_DATA_PATH: string;
 }
 
 interface ImportMeta {
