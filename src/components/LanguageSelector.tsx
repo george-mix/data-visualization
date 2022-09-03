@@ -1,7 +1,7 @@
 import React from 'react';
 import {FormControl, MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import {useTranslation} from 'react-i18next';
-import {suppportedLanguages} from '@utils/common/data';
+import {suppportedLanguages} from '@helpers/common/data';
 
 export const LanguageSelector: React.FC = () => {
   const {i18n} = useTranslation();

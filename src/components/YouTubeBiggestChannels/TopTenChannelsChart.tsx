@@ -1,6 +1,6 @@
 import React from 'react';
 import {max, scaleBand, scaleLinear} from 'd3';
-import {YouTubeChannelData} from '@common/interfaces';
+import {YouTubeChannelData} from '@helpers/common/interfaces';
 
 type ChartProps = {
   data: YouTubeChannelData[];

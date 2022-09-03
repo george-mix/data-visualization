@@ -1,6 +1,6 @@
 import React from 'react';
 import {Avatar, List, ListItem} from '@mui/material';
-import {socialMediaList} from '@utils/common/data';
+import {socialMediaList} from '@helpers/common/data';
 
 export const SocialMediaLinks: React.FC = () => (
   <List style={{display: 'flex'}}>

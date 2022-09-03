@@ -1,7 +1,7 @@
 import React from 'react';
 import {List, ListItem, Typography} from '@mui/material';
 import {useTranslation} from 'react-i18next';
-import {technologyStackList} from '@common/data';
+import {technologyStackList} from '@helpers/common/data';
 
 export const TechnologyList: React.FC = () => {
   const {t} = useTranslation();

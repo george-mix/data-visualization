@@ -1,6 +1,6 @@
 import React from 'react';
 import {extent, line, scaleLinear, curveCatmullRom as testcurve} from 'd3';
-import {JamesBondFilmData} from '@common/interfaces';
+import {JamesBondFilmData} from '@helpers/common/interfaces';
 
 const width = 960;
 const height = 500;

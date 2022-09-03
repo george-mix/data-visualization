@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 import {Link} from 'react-router-dom';
-import {ArticleInfo} from '@common/interfaces';
+import {ArticleInfo} from '@helpers/common/interfaces';
 
 type FeedArticleProps = {
   article: ArticleInfo;

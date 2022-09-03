@@ -1,8 +1,8 @@
 import React from 'react';
 import {List, ListItem, ListItemText} from '@mui/material';
 import {Link} from 'react-router-dom';
-import {AppRoute} from '@common/interfaces';
 import {useTranslation} from 'react-i18next';
+import {AppRoute} from '@helpers/common/interfaces';
 
 export const NavList: React.FC<{
   routes: AppRoute[]

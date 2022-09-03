@@ -1,9 +1,9 @@
 import React from 'react';
-import {useParseRemoteCSV} from '@utils/hooks/useParseRemoteCSV';
+import {useParseRemoteCSV} from '@helpers/hooks/useParseRemoteCSV';
 import {TopTenChannelsChart} from '@components/YouTubeBiggestChannels/TopTenChannelsChart';
 import {LanguagePercentageChart} from '@components/YouTubeBiggestChannels/LanguagePercentageChart';
 import {ChannelQuantityChoroplethMap} from '@components/YouTubeBiggestChannels/ChannelQuantityChoroplethMap';
-import {YouTubeChannelData, YouTubeParsedCSVData} from '@common/interfaces';
+import {YouTubeChannelData, YouTubeParsedCSVData} from '@helpers/common/interfaces';
 
 export const YouTubeBiggestChannels: React.FC = () => {
   const url = import.meta.env.VITE_YOUTUBE_CHANNELS_DATA_SOURCE;

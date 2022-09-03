@@ -1,6 +1,6 @@
 import React from 'react';
-import {useParseRemoteCSV} from '@utils/hooks/useParseRemoteCSV';
-import {JamesBondFilmData, JamesBondParsedCSVData} from '@common/interfaces';
+import {useParseRemoteCSV} from '@helpers/hooks/useParseRemoteCSV';
+import {JamesBondFilmData, JamesBondParsedCSVData} from '@helpers/common/interfaces';
 import {BoxOfficeDonutChart} from '@components/JamesBondFilms/BoxOfficeDonutChart';
 import {PopularityTimeline} from '@components/JamesBondFilms/PopularityTimeline';
 

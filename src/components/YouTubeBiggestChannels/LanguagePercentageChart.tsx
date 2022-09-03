@@ -8,7 +8,7 @@ import {
   schemeSet3,
   sum,
 } from 'd3';
-import {YouTubeChannelData} from '@common/interfaces';
+import {YouTubeChannelData} from '@helpers/common/interfaces';
 import {PieArc} from '@components/ChartElements/PieArc';
 
 interface SubscriberLanguage {

@@ -1,11 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
-import {TranslationProvider} from '@utils/providers/TranslationProvider';
-import {StyleProvider} from '@utils/providers/StyleProvider';
-import {ClientStateProvider} from '@utils/providers/ClientStateProvider';
-import {SuspenseProvider} from '@utils/providers/SuspenseProvider';
+import {TranslationProvider} from '@helpers/providers/TranslationProvider';
+import {StyleProvider} from '@helpers/providers/StyleProvider';
+import {ClientStateProvider} from '@helpers/providers/ClientStateProvider';
+import {SuspenseProvider} from '@helpers/providers/SuspenseProvider';
 import {AppLayout} from '@layouts/AppLayout';
-import {ServerStateProvider} from '@utils/providers/ServerStateProvider';
+import {ServerStateProvider} from '@helpers/providers/ServerStateProvider';
 
 const App: React.FC = () => (
   <ClientStateProvider>

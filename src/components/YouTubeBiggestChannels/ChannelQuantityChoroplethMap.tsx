@@ -5,8 +5,8 @@ import {
   interpolateYlOrRd,
   scaleSequential,
 } from 'd3';
-import {useWorldAtlas} from '@utils/hooks/useWorldAtlas';
-import {YouTubeChannelData} from '@common/interfaces';
+import {useWorldAtlas} from '@helpers/hooks/useWorldAtlas';
+import {YouTubeChannelData} from '@helpers/common/interfaces';
 import {ChoroplethMap} from '@components/ChartElements/ChoroplethMap';
 const worldAtlasUrl = import.meta.env.VITE_WORLD_ATLAS_JSON_URL_110M;
 

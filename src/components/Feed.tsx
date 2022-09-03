@@ -5,7 +5,7 @@ import {
   Typography,
 } from '@mui/material';
 import {FeedArticle} from './FeedArticle';
-import {articles} from '@common/data';
+import {articles} from '@helpers/common/data';
 
 export const Feed: React.FC = () => (
   <Container>

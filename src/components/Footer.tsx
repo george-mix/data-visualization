@@ -10,7 +10,7 @@ import {
 import {Link} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
 import {mainRoutes} from '@router/routes';
-import {socialMediaList} from '@common/data';
+import {socialMediaList} from '@helpers/common/data';
 
 export const Footer: React.FC = () => {
   const {t} = useTranslation();

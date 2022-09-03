@@ -1,7 +1,7 @@
 import React from 'react';
 import {List, ListItem, Typography} from '@mui/material';
 import {useTranslation} from 'react-i18next';
-import {projectGoals} from '@common/data';
+import {projectGoals} from '@helpers/common/data';
 
 export const GoalsList: React.FC = () => {
   const {t} = useTranslation();

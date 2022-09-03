@@ -9,8 +9,8 @@ import {
   schemeSet3,
   sum,
 } from 'd3';
-import {KeysOfType} from '@common/types';
-import {JamesBondFilmData} from '@common/interfaces';
+import {KeysOfType} from '@helpers/common/types';
+import {JamesBondFilmData} from '@helpers/common/interfaces';
 import {PieArc} from '@components/ChartElements/PieArc';
 
 interface KeyPersonTotalBoxOffice {
