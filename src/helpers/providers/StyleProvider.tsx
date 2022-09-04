@@ -1,7 +1,6 @@
 import React from 'react';
 import {CssBaseline, ThemeProvider, createTheme} from '@mui/material';
-import {useSelector} from 'react-redux';
-import {themeModeSelector} from '@store/theme/themeSelectors';
+import {useThemeMode} from '@helpers/hooks/useThemeMode';
 
 const typography = {
   body2: {
@@ -77,7 +76,7 @@ const lightTheme = createTheme({
 });
 
 export const StyleProvider: React.FC = ({children}) => {
-  const themeMode = useSelector(themeModeSelector);
+  const {themeMode} = useThemeMode();
   const theme = themeMode === 'light' ? lightTheme : darkTheme;
 
   return (
