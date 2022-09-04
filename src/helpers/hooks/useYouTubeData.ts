@@ -4,7 +4,9 @@ import {YouTubeChannelData, YouTubeParsedCSVData} from '@helpers/common/interfac
 
 const path = import.meta.env.VITE_YOUTUBE_CHANNELS_DATA_PATH;
 
-export const useYouTubeData = (): [YouTubeChannelData[], boolean, boolean] => {
+type UseYouTubeData = () => [YouTubeChannelData[], boolean, boolean];
+
+export const useYouTubeData: UseYouTubeData = () => {
   const {data, isLoading, isError} = useQuery(
     ['youtubeData'],
     () => getParsedGist<YouTubeParsedCSVData>(path),

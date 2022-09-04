@@ -4,7 +4,9 @@ import {JamesBondFilmData, JamesBondParsedCSVData} from '@helpers/common/interfa
 
 const path = import.meta.env.VITE_JAMES_BOND_FILMS_DATA_PATH;
 
-export const useJamesBondData = (): [JamesBondFilmData[], boolean, boolean] => {
+type UseJamesBondData = () => [JamesBondFilmData[], boolean, boolean];
+
+export const useJamesBondData: UseJamesBondData = () => {
   const {data, isLoading, isError} = useQuery(
     ['jamesBondData'],
     () => getParsedGist<JamesBondParsedCSVData>(path),
