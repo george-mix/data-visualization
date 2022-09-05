@@ -1,7 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import EmailIcon from '@mui/icons-material/Email';
-import {ArticleInfo, ProjectGoal, SocialMedia} from './interfaces';
+import {ProjectGoal, SocialMedia} from './interfaces';
 
 export const suppportedLanguages = ['EN', 'RU'];
 
@@ -20,21 +20,6 @@ export const socialMediaList: SocialMedia[] = [
     name: 'Github',
     link: import.meta.env.VITE_GITHUB_LINK,
     icon: GitHubIcon,
-  },
-];
-
-export const articles: ArticleInfo[] = [
-  {
-    title: 'james-bond-films.title',
-    image: '/images.local/bond.jpg',
-    path: '/james-bond-films',
-    teaser: 'james-bond-films.teaser',
-  },
-  {
-    title: 'youtube-channels.title',
-    image: '/images.local/youtube.jpg',
-    path: '/youtube-biggest-channels',
-    teaser: 'youtube-channels.teaser',
   },
 ];
 

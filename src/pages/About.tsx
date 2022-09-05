@@ -5,7 +5,7 @@ import {SocialMediaLinks} from '@components/SocialMediaLinks';
 import {GoalsList} from '@components/GoalsList';
 import {TechnologyList} from '@components/TechnologyList';
 
-export const About: React.FC = () => {
+const About: React.FC = () => {
   const {t} = useTranslation();
 
   return (
@@ -23,3 +23,5 @@ export const About: React.FC = () => {
     </Container>
   );
 };
+
+export default About;

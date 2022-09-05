@@ -3,7 +3,7 @@ import {BoxOfficeDonutChart} from '@components/JamesBondFilms/BoxOfficeDonutChar
 import {PopularityTimeline} from '@components/JamesBondFilms/PopularityTimeline';
 import {useJamesBondData} from '@helpers/hooks/useJamesBondData';
 
-export const JamesBondFilms: React.FC = () => {
+const JamesBondFilms: React.FC = () => {
   const [parsedFilmData, isLoading] = useJamesBondData();
 
   if (isLoading) {
@@ -18,3 +18,5 @@ export const JamesBondFilms: React.FC = () => {
     </>
   );
 };
+
+export default JamesBondFilms;

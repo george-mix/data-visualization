@@ -1,3 +1,5 @@
 import React from 'react';
 
-export const NotFound: React.FC = () => (<>Wrong page!</>);
+const NotFound: React.FC = () => (<>Wrong page!</>);
+
+export default NotFound;

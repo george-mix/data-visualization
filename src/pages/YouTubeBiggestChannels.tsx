@@ -4,7 +4,7 @@ import {LanguagePercentageChart} from '@components/YouTubeBiggestChannels/Langua
 import {ChannelQuantityChoroplethMap} from '@components/YouTubeBiggestChannels/ChannelQuantityChoroplethMap';
 import {useYouTubeData} from '@helpers/hooks/useYouTubeData';
 
-export const YouTubeBiggestChannels: React.FC = () => {
+const YouTubeBiggestChannels: React.FC = () => {
   const [parsedYouTubeData, isLoading] = useYouTubeData();
 
   if (isLoading) {
@@ -21,3 +21,4 @@ export const YouTubeBiggestChannels: React.FC = () => {
   );
 };
 
+export default YouTubeBiggestChannels;

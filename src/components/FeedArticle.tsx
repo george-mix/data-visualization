@@ -10,10 +10,10 @@ import {
   Typography,
 } from '@mui/material';
 import {Link} from 'react-router-dom';
-import {ArticleInfo} from '@helpers/common/interfaces';
+import {ArticleRoute} from '@helpers/common/interfaces';
 
 type FeedArticleProps = {
-  article: ArticleInfo;
+  article: ArticleRoute;
 };
 
 export const FeedArticle: React.FC<FeedArticleProps> = ({article}) => {

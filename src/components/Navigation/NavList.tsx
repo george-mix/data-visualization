@@ -12,9 +12,9 @@ export const NavList: React.FC<{
   return (
     <List>
       {routes.map((route) => (
-        <ListItem button key={route.name}>
+        <ListItem button key={route.title}>
           <Link to={route.path}>
-            <ListItemText primary={t(`${route.name}`)} />
+            <ListItemText primary={t(`${route.title}`)} />
           </Link>
         </ListItem>
       ))}

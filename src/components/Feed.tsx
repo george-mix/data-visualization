@@ -5,7 +5,7 @@ import {
   Typography,
 } from '@mui/material';
 import {FeedArticle} from './FeedArticle';
-import {articles} from '@helpers/common/data';
+import {articleRoutes} from '@router/routes';
 
 export const Feed: React.FC = () => (
   <Container>
@@ -13,7 +13,7 @@ export const Feed: React.FC = () => (
       <Typography variant="h4" component="h2">
         Articles
       </Typography>
-      {articles.map((article) => (
+      {articleRoutes.map((article) => (
         <FeedArticle key={article.path} article={article}/>
       ))}
     </Box>

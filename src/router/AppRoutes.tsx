@@ -1,7 +1,12 @@
-import React, {useLayoutEffect} from 'react';
+import React, {lazy, useLayoutEffect} from 'react';
 import {Route, Routes, useLocation} from 'react-router-dom';
-import {NotFound} from '@pages/NotFound';
-import {articleRoutes, mainRoutes} from './routes';
+import {AppPaths} from './routes';
+
+const NotFound = lazy(() => import('@pages/NotFound'));
+const Home = lazy(() => import('@pages/Home'));
+const About = lazy(() => import('@pages/About'));
+const YouTubeBiggestChannels = lazy(() => import('@pages/YouTubeBiggestChannels'));
+const JamesBondFilms = lazy(() => import('@pages/JamesBondFilms'));
 
 export const AppRoutes: React.FC = () => {
   const location = useLocation();
@@ -12,14 +17,26 @@ export const AppRoutes: React.FC = () => {
 
   return (
     <Routes>
-      {[...articleRoutes, ...mainRoutes].map((route) => (
-        <Route
-          key={route.path}
-          path={route.path}
-          element={<route.element />}
-        />
-      ))}
-      <Route path="*" element={<NotFound />} />
+      <Route
+        path="*"
+        element={<NotFound />}
+      />
+      <Route
+        path={AppPaths.Home}
+        element={<Home />}
+      />
+      <Route
+        path={AppPaths.About}
+        element={<About />}
+      />
+      <Route
+        path={AppPaths.YouTubeBiggestChannels}
+        element={<YouTubeBiggestChannels />}
+      />
+      <Route
+        path={AppPaths.JamesBondFilms}
+        element={<JamesBondFilms />}
+      />
     </Routes>
   );
 };

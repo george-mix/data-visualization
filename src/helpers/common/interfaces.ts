@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Feature,
   FeatureCollection,
@@ -10,9 +9,13 @@ import {OverridableComponent} from '@mui/material/OverridableComponent';
 import {SvgIconTypeMap} from '@mui/material';
 
 export interface AppRoute {
-  name: string;
+  title: string;
   path: string;
-  element: React.FC;
+}
+
+export interface ArticleRoute extends AppRoute {
+  teaser: string;
+  image: string;
 }
 
 export interface WorldAtlas {
@@ -26,13 +29,6 @@ export interface SocialMedia {
   icon: OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & {
     muiName: string;
   };
-}
-
-export interface ArticleInfo {
-  title: string;
-  teaser: string;
-  image: string;
-  path: string;
 }
 
 export interface ProjectGoal {

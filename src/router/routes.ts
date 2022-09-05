@@ -1,31 +1,35 @@
-import {About} from '@pages/About';
-import {Home} from '@pages/Home';
-import {JamesBondFilms} from '@pages/JamesBondFilms';
-import {YouTubeBiggestChannels} from '@pages/YouTubeBiggestChannels';
-import {AppRoute} from '@helpers/common/interfaces';
+import {AppRoute, ArticleRoute} from "@helpers/common/interfaces";
+
+export enum AppPaths {
+  'NotFound' = '*',
+  'Home' = '/',
+  'About' = '/about',
+  'YouTubeBiggestChannels' = '/youtube-biggest-channels',
+  'JamesBondFilms' = '/james-bond-films',
+};
 
 export const mainRoutes: AppRoute[] = [
   {
-    name: 'home.title',
-    path: '/',
-    element: Home,
+    title: 'home.title',
+    path: AppPaths.Home,
   },
   {
-    name: 'about.title',
-    path: '/about',
-    element: About,
+    title: 'about.title',
+    path: AppPaths.About,
   },
 ];
 
-export const articleRoutes: AppRoute[] = [
+export const articleRoutes: ArticleRoute[] = [
   {
-    name: 'youtube-channels.title',
-    path: '/youtube-biggest-channels',
-    element: YouTubeBiggestChannels,
+    title: 'james-bond-films.title',
+    path: AppPaths.JamesBondFilms,
+    image: '/images.local/bond.jpg',
+    teaser: 'james-bond-films.teaser',
   },
   {
-    name: 'james-bond-films.title',
-    path: '/james-bond-films',
-    element: JamesBondFilms,
+    title: 'youtube-channels.title',
+    path: AppPaths.YouTubeBiggestChannels,
+    image: '/images.local/youtube.jpg',
+    teaser: 'youtube-channels.teaser',
   },
 ];
