@@ -1,7 +1,8 @@
 import React, {Suspense} from 'react';
+import {FullScreenSpinner} from '@components/UI/FullScreenSpinner';
 
 export const SuspenseProvider: React.FC = ({children}) => (
-  <Suspense fallback={<pre>Loading...</pre>}>
+  <Suspense fallback={<FullScreenSpinner />}>
     {children}
   </Suspense>
 );
