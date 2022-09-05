@@ -1,13 +1,12 @@
 import React from 'react';
 import {FormControl, MenuItem, Select, SelectChangeEvent} from '@mui/material';
-import {useTranslation} from 'react-i18next';
-import {suppportedLanguages} from '@helpers/common/data';
+import {useLanguage} from '@helpers/hooks/useLanguage';
 
 export const LanguageSelector: React.FC = () => {
-  const {i18n} = useTranslation();
+  const {currentLanguage, suppportedLanguages, changeLanguage} = useLanguage();
 
-  const handleChange = (event: SelectChangeEvent) => {
-    i18n.changeLanguage(event.target.value.toLowerCase());
+  const handleLanguageChange = (event: SelectChangeEvent) => {
+    changeLanguage(event.target.value);
   };
 
   return (
@@ -15,9 +14,9 @@ export const LanguageSelector: React.FC = () => {
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
-        value={i18n.resolvedLanguage.toUpperCase()}
+        value={currentLanguage}
         displayEmpty
-        onChange={handleChange}
+        onChange={handleLanguageChange}
       >
         {suppportedLanguages.map((language) =>
           <MenuItem
@@ -30,4 +29,3 @@ export const LanguageSelector: React.FC = () => {
     </FormControl>
   );
 };
-
