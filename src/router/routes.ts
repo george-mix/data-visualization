@@ -1,4 +1,8 @@
 import {AppRoute, ArticleRoute} from "@helpers/common/interfaces";
+import BondLargeImage from '@assets/bond.large.jpg';
+import BondTinyImage from '@assets/bond.tiny.jpg';
+import YouTubeLargeImage from '@assets/youtube.large.jpg';
+import YouTubeTinyImage from '@assets/youtube.tiny.jpg';
 
 export enum AppPaths {
   'NotFound' = '*',
@@ -23,13 +27,15 @@ export const articleRoutes: ArticleRoute[] = [
   {
     title: 'james-bond-films.title',
     path: AppPaths.JamesBondFilms,
-    image: '/images.local/bond.jpg',
+    largeImage: BondLargeImage,
+    tinyImage: BondTinyImage,
     teaser: 'james-bond-films.teaser',
   },
   {
     title: 'youtube-channels.title',
     path: AppPaths.YouTubeBiggestChannels,
-    image: '/images.local/youtube.jpg',
+    largeImage: YouTubeLargeImage,
+    tinyImage: YouTubeTinyImage,
     teaser: 'youtube-channels.teaser',
   },
 ];

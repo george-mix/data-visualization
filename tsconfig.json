@@ -23,6 +23,7 @@
       "@store/*": ["store/*"],
       "@router/*": ["router/*"],
       "@layouts/*": ["layouts/*"],
+      "@assets/*": ["assets.local/*"],
     }
   },
   "include": ["src"],

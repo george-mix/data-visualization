@@ -6,11 +6,11 @@ import {
   CardActionArea,
   CardActions,
   CardContent,
-  CardMedia,
   Typography,
 } from '@mui/material';
 import {Link} from 'react-router-dom';
 import {ArticleRoute} from '@helpers/common/interfaces';
+import {ArticleImage} from './ArticleImage';
 
 type FeedArticleProps = {
   article: ArticleRoute;
@@ -23,11 +23,9 @@ export const FeedArticle: React.FC<FeedArticleProps> = ({article}) => {
     <Card component="article">
       <Link to={article.path}>
         <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image={article.image}
-            alt="article preview"
+          <ArticleImage
+            imageSrc={article.largeImage}
+            placeholderSrc={article.tinyImage}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h3">
