@@ -74,7 +74,7 @@ export const TopTenChannelsChart: React.FC<ChartProps> = ({data}) => {
           fontSize="2em"
           fill={theme.palette.text.primary}
         >
-          Subscribers (mlns)
+          Subscribers (mln)
         </text>
         {yScale.domain().map((tick: string) => (
           <g

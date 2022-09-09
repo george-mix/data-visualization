@@ -2,7 +2,8 @@
   "common": {
     "read-more": "Read more",
     "contacts": "Contacts",
-    "pages": "Pages"
+    "pages": "Pages",
+    "source": "See data source"
   },
   "home": {
     "title": "Home",
@@ -35,7 +36,14 @@
   },
   "youtube-channels": {
     "title": "Most Popular YouTube Channels",
-    "teaser": "Top 50 largest channels by the number of subscribers. Comparison by language, country and content category."
+    "teaser": "Top 50 largest channels by the number of subscribers. Comparison by language, country and content category.",
+    "introduction": "In this article, we take a look at the top 50 YouTube channels by subscriber count as of August 19, 2022.",
+    "about-source": "All information about the channels was taken from the Wikipedia article: \"List of the most popular YouTube channels\".",
+    "top-ten-channels": {
+      "subheader": "Top 10 channels by amount of subscribers",
+      "first-paragraph": "As we can see, the Indian music channel T-series confidently holds the first place. The number of T-series subscribers is more than 1.5 times the number of subscribers of the nearest pursuer.",
+      "second-paragraph": "Interestingly, although there are representatives of 5 countries in the top ten, there are only two broadcast languages: English and Hindi."
+    }
   },
   "james-bond-films": {
     "title": "James Bond Films",
