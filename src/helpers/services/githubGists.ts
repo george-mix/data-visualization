@@ -1,4 +1,4 @@
-import {combineTwoStrings} from '@helpers/functions/combineTwoStrings';
+import {combineTwoStrings} from '@helpers/functions/stringUtils';
 import {parseRemoteCSV} from '@helpers/functions/parseRemoteCSV';
 
 const BASE_URL = import.meta.env.VITE_GITHUB_GISTS_BASE_URL;
