@@ -75,3 +75,7 @@ export interface JamesBondFilmData {
   budgetActual: number,
   budgetAdjusted: number,
 }
+
+export interface ColorSchemes {
+  schemeOne: string[];
+}

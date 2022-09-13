@@ -1,7 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import EmailIcon from '@mui/icons-material/Email';
-import {ProjectGoal, SocialMedia} from './interfaces';
+import {ColorSchemes, ProjectGoal, SocialMedia} from './interfaces';
 
 export const suppportedLanguages = ['EN', 'RU'];
 
@@ -48,3 +48,33 @@ export const technologyStackList = [
   'MUI',
   'D3',
 ];
+
+export const lightThemeColorSchemes: ColorSchemes = {
+  schemeOne: [
+    '#456b86',
+    '#d7b1b3',
+    '#bbc5d5',
+    '#a6978b',
+    '#788cae',
+    '#90756f',
+    '#6f6764',
+    '#a0968f',
+    '#5d3a35',
+    '#3a2d39',
+  ],
+};
+
+export const darkThemeColorSchemes: ColorSchemes = {
+  schemeOne: [
+    '#f8734b',
+    '#f08667',
+    '#cb5845',
+    '#d67754',
+    '#a24640',
+    '#c55b36',
+    '#b03824',
+    '#612613',
+    '#734638',
+    '#bf6b52',
+  ],
+};
