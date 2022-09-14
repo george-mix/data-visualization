@@ -118,7 +118,7 @@ export const BoxOfficeDonutChart: React.FC<ChartProps> = ({data}) => {
           {languagePieArcs.map((arc, index) => (
             <React.Fragment key={arc.data.person}>
               <PieArc<KeyPersonTotalBoxOffice>
-                data={arc}
+                arc={arc}
                 index={index}
                 createArc={createArc}
                 colors={colors}
