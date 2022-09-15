@@ -1,11 +1,11 @@
 import React from 'react';
 import i18n from 'i18next';
 import {I18nextProvider, initReactI18next} from 'react-i18next';
-import Backend from 'i18next-http-backend';
+import HttpBackend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
-  .use(Backend)
+  .use(HttpBackend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({

@@ -5,7 +5,7 @@ import {ResponsiveSvg} from '@components/ChartElements/ResponsiveSvg';
 import {PieChartPart} from '@components/ChartElements/PieChartPart';
 import {useColorScheme} from '@helpers/hooks/useColorScheme';
 import {useChangeLanguageInfo} from './useChangeLanguageInfo';
-import {LanguageInfo} from './LanguageInfo';
+import {LanguageInfo} from './languagePercentageTypes';
 import {FormControlLabel, Radio, RadioGroup} from '@mui/material';
 
 type ChartProps = {

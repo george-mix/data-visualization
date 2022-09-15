@@ -2,7 +2,7 @@ import React from 'react';
 import {Typography} from '@mui/material';
 import {useTranslation} from 'react-i18next';
 import {YouTubeChannelData} from '@helpers/common/interfaces';
-import {SVGStatusProvider} from '@helpers/providers/SVGStatusProvider';
+import {SvgStatusProvider} from '@helpers/providers/SvgStatusProvider';
 import {TopTenChannelsChart} from './TopTenChannelsChart';
 
 type TopTenChannelsProps = {
@@ -24,9 +24,9 @@ export const TopTenChannels: React.FC<TopTenChannelsProps> = ({
         {t('youtube-channels.top-ten-channels.subheader')}
       </Typography>
 
-      <SVGStatusProvider isLoading={isLoading} isError={isError}>
+      <SvgStatusProvider isLoading={isLoading} isError={isError}>
         <TopTenChannelsChart data={data} />
-      </SVGStatusProvider>
+      </SvgStatusProvider>
 
       <Typography variant={'body1'} component={'p'}>
         {t('youtube-channels.top-ten-channels.first-paragraph')}
