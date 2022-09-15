@@ -3,12 +3,15 @@ import {AppNavigation} from '@components/Navigation/AppNavigation';
 import {AppRoutes} from '@router/AppRoutes';
 import {Footer} from '@components/Footer';
 import {RouteSuspenseProvider} from '@helpers/providers/RouteSuspenseProvider';
+import {Main} from '@components/UI/Main';
 
 export const AppLayout: React.FC = () => (
   <>
     <AppNavigation />
     <RouteSuspenseProvider>
-      <AppRoutes />
+      <Main>
+        <AppRoutes />
+      </Main>
     </RouteSuspenseProvider>
     <Footer />
   </>
