@@ -2,16 +2,13 @@ import React from 'react';
 import {TextComponentProps} from '@helpers/common/types';
 import {TranslatedTypography} from './TranslatedTypography';
 
-export const FigureCaption: React.FC<TextComponentProps> = ({text, sx}) => (
+export const Paragraph: React.FC<TextComponentProps> = ({text, sx}) => (
   <TranslatedTypography
     translation={text}
-    variant="subtitle1"
-    component="figcaption"
+    variant="body1"
+    component="p"
     sx={{
-      color: 'info.dark',
-      textAlign: 'center',
-      lineBreak: 'anywhere',
-      pt: 2,
+      pb: 1,
       ...sx,
     }}
   />
