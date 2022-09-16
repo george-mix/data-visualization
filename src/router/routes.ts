@@ -1,3 +1,7 @@
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import MovieIcon from '@mui/icons-material/Movie';
 import {AppRoute, ArticleRoute} from "@helpers/common/interfaces";
 import BondLargeImage from '@assets/bond.large.jpg';
 import BondTinyImage from '@assets/bond.tiny.jpg';
@@ -16,10 +20,12 @@ export const mainRoutes: AppRoute[] = [
   {
     title: 'home.title',
     path: AppPaths.Home,
+    icon: HomeIcon,
   },
   {
     title: 'about.title',
     path: AppPaths.About,
+    icon: InfoIcon,
   },
 ];
 
@@ -30,6 +36,7 @@ export const articleRoutes: ArticleRoute[] = [
     largeImage: BondLargeImage,
     tinyImage: BondTinyImage,
     teaser: 'james-bond-films.teaser',
+    icon: MovieIcon,
   },
   {
     title: 'youtube-channels.title',
@@ -37,5 +44,6 @@ export const articleRoutes: ArticleRoute[] = [
     largeImage: YouTubeLargeImage,
     tinyImage: YouTubeTinyImage,
     teaser: 'youtube-channels.teaser',
+    icon: YouTubeIcon,
   },
 ];

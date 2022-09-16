@@ -5,12 +5,12 @@ import {
   Geometry,
   MultiLineString,
 } from 'geojson';
-import {OverridableComponent} from '@mui/material/OverridableComponent';
-import {SvgIconTypeMap} from '@mui/material';
+import {MuiIcon} from './types';
 
 export interface AppRoute {
   title: string;
   path: string;
+  icon: MuiIcon;
 }
 
 export interface ArticleRoute extends AppRoute {
@@ -27,14 +27,16 @@ export interface WorldAtlas {
 export interface SocialMedia {
   name: string;
   link: string;
-  icon: OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & {
-    muiName: string;
-  };
+  icon: MuiIcon;
 }
 
 export interface ProjectGoal {
   header: string;
   description: string;
+}
+
+export interface ColorSchemes {
+  schemeOne: string[];
 }
 
 // article data interfaces
@@ -74,8 +76,4 @@ export interface JamesBondFilmData {
   boxOfficeAdjusted: number,
   budgetActual: number,
   budgetAdjusted: number,
-}
-
-export interface ColorSchemes {
-  schemeOne: string[];
 }
