@@ -1,6 +1,9 @@
 import React from 'react';
-import {LinearProgress} from '@mui/material';
+import {Box, LinearProgress} from '@mui/material';
 
 export const RouteFallback: React.FC = () => (
-  <LinearProgress color="secondary" />
+  <>
+    <LinearProgress color="secondary" />
+    <Box sx={{minHeight: '100vh'}} />
+  </>
 );
