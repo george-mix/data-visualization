@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link, List, ListItem, ListItemText} from '@mui/material';
-import {Link as RouterLink} from 'react-router-dom';
+import {List, ListItem, ListItemText} from '@mui/material';
 import {useTranslation} from 'react-i18next';
 import {TranslatedTypography} from '@components/UI/TranslatedTypography';
 import {mainRoutes} from '@router/routes';
+import {RouterLink} from '@components/UI/RouterLink';
 
 export const PageList: React.FC = () => {
   const {t} = useTranslation();
@@ -25,21 +25,16 @@ export const PageList: React.FC = () => {
             disableGutters
             component="li"
           >
-            <Link
-              component={RouterLink}
+            <RouterLink
               to={route.path}
-              underline="none"
               sx={{
                 '& :hover': {
                   color: 'primary.light',
                 },
               }}
             >
-              <ListItemText
-                primary={t(`${route.title}`)}
-                sx={{color: 'text.primary'}}
-              />
-            </Link>
+              <ListItemText primary={t(`${route.title}`)} />
+            </RouterLink>
           </ListItem>
         ))}
       </List>

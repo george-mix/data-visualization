@@ -1,8 +1,8 @@
 import React from 'react';
 import {List, ListItem, ListItemIcon, ListItemText} from '@mui/material';
-import {Link} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
 import {AppRoute} from '@helpers/common/interfaces';
+import {RouterLink} from '@components/UI/RouterLink';
 
 export const NavList: React.FC<{
   routes: AppRoute[]
@@ -16,9 +16,9 @@ export const NavList: React.FC<{
           <ListItemIcon>
             {<route.icon sx={{color: 'primary.light'}}/>}
           </ListItemIcon>
-          <Link to={route.path}>
+          <RouterLink to={route.path}>
             <ListItemText primary={t(`${route.title}`)} />
-          </Link>
+          </RouterLink>
         </ListItem>
       ))}
     </List>

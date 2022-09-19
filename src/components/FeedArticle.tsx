@@ -8,9 +8,9 @@ import {
   CardContent,
   Typography,
 } from '@mui/material';
-import {Link} from 'react-router-dom';
 import {ArticleRoute} from '@helpers/common/interfaces';
 import {ArticleImage} from './ArticleImage';
+import {RouterLink} from './UI/RouterLink';
 
 type FeedArticleProps = {
   article: ArticleRoute;
@@ -21,7 +21,7 @@ export const FeedArticle: React.FC<FeedArticleProps> = ({article}) => {
 
   return (
     <Card component="article">
-      <Link to={article.path}>
+      <RouterLink to={article.path}>
         <CardActionArea>
           <ArticleImage
             imageSrc={article.largeImage}
@@ -41,7 +41,7 @@ export const FeedArticle: React.FC<FeedArticleProps> = ({article}) => {
             {t('common.read-more')}
           </Button>
         </CardActions>
-      </Link>
+      </RouterLink>
     </Card>
   );
 };
