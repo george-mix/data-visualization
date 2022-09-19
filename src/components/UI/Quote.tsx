@@ -1,14 +1,15 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import {Box, SxProps} from '@mui/material';
 import {TextComponentProps} from '@helpers/common/types';
 import {TranslatedTypography} from './TranslatedTypography';
 import {Figure} from './Figure';
 
 type QuoteProps = TextComponentProps & {
   author: string;
+  authorSx?: SxProps;
 };
 
-export const Quote: React.FC<QuoteProps> = ({text, author, sx}) => (
+export const Quote: React.FC<QuoteProps> = ({text, author, sx, authorSx}) => (
   <Figure>
     <Box
       component="blockquote"
@@ -38,7 +39,7 @@ export const Quote: React.FC<QuoteProps> = ({text, author, sx}) => (
           component="span"
           sx={{
             fontWeight: 300,
-            ...sx,
+            ...authorSx,
           }}
         />
       </Box>

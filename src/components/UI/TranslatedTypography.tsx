@@ -6,9 +6,11 @@ interface TranslatedTypographyProps extends TypographyProps<any>{
   translation: string;
 }
 
-export const TranslatedTypography: React.FC<TranslatedTypographyProps> = (props) => {
+export const TranslatedTypography: React.FC<TranslatedTypographyProps> = ({
+  translation,
+  ...typographyProps
+}) => {
   const {t} = useTranslation();
-  const {translation, ...typographyProps} = props;
 
   return (
     <Typography {...typographyProps}>

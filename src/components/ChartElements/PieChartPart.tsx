@@ -18,6 +18,7 @@ type PieChartPartProps<T> = {
   isShowPolyline?: boolean;
   polylineOptions?: Partial<ArcPolylineProps<T>>;
 }
+
 export const PieChartPart = <T, >({
   arc,
   createArc,

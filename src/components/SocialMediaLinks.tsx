@@ -3,7 +3,7 @@ import {Avatar, List, ListItem} from '@mui/material';
 import {socialMediaList} from '@helpers/common/data';
 
 export const SocialMediaLinks: React.FC = () => (
-  <List style={{display: 'flex'}}>
+  <List sx={{display: 'flex'}}>
     {socialMediaList.map((media) => (
       <ListItem key={media.name}>
         <a href={media.link}>
