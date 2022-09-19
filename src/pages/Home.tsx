@@ -1,10 +1,15 @@
 import React from 'react';
-import {HeroSection} from '@components/HeroSection';
 import {Feed} from '@components/Feed';
+import {Paragraph} from '@components/UI/Paragraph';
+import {Quote} from '@components/UI/Quote';
+import {PageHeader} from '@components/PageHeader';
 
 const Home: React.FC = () => (
   <>
-    <HeroSection />
+    <PageHeader headline="home.hero-section.header" />
+    <Paragraph text="home.hero-section.welcome-message" />
+    <Quote text="home.hero-section.quote" author="home.hero-section.quote-author" />
+    <Paragraph text="home.hero-section.description" />
     <Feed />
   </>
 );
