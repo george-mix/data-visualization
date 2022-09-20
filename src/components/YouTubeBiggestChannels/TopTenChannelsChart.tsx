@@ -5,7 +5,7 @@ import {useTheme} from '@mui/system';
 
 const width = 960;
 const height = 700;
-const margin = {top: 20, right: 40, bottom: 80, left: 40};
+const margin = {top: 0, right: 0, bottom: 80, left: 0};
 
 type ChartProps = {
   data: YouTubeChannelData[];

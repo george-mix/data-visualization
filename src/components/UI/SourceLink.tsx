@@ -1,15 +1,27 @@
 import React from 'react';
-import {Link} from '@mui/material';
+import {Box, Link, SxProps} from '@mui/material';
 import {useTranslation} from 'react-i18next';
 
 type SourceLinkProps = {
   link: string;
+  sx?: SxProps;
 }
 
-export const SourceLink: React.FC<SourceLinkProps> = ({link}) => {
+export const SourceLink: React.FC<SourceLinkProps> = ({link, sx}) => {
   const {t} = useTranslation();
 
   return (
-    <Link href={link}>{t('common.source')}</Link>
+    <Box
+      component="p"
+      sx={{
+        m: 0,
+        ...sx,
+      }}
+
+    >
+      <Link href={link}>
+        {t('common.source')}
+      </Link>
+    </Box>
   );
 };

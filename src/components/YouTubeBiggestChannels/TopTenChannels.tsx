@@ -1,9 +1,10 @@
 import React from 'react';
-import {Typography} from '@mui/material';
-import {useTranslation} from 'react-i18next';
 import {YouTubeChannelData} from '@helpers/common/interfaces';
 import {SvgStatusProvider} from '@helpers/providers/SvgStatusProvider';
 import {TopTenChannelsChart} from './TopTenChannelsChart';
+import {Subheader} from '@components/UI/Subheader';
+import {Paragraph} from '@components/UI/Paragraph';
+import {Figure} from '@components/UI/Figure';
 
 type TopTenChannelsProps = {
   data: YouTubeChannelData[];
@@ -15,25 +16,23 @@ export const TopTenChannels: React.FC<TopTenChannelsProps> = ({
   data,
   isLoading,
   isError,
-}) => {
-  const {t} = useTranslation();
+}) => (
+  <>
+    <Subheader
+      text="youtube-channels.top-ten-channels.subheader"
+    />
 
-  return (
-    <>
-      <Typography variant={'h6'} component={'h2'}>
-        {t('youtube-channels.top-ten-channels.subheader')}
-      </Typography>
-
+    <Figure caption="youtube-channels.top-ten-channels.caption">
       <SvgStatusProvider isLoading={isLoading} isError={isError}>
         <TopTenChannelsChart data={data} />
       </SvgStatusProvider>
+    </Figure>
 
-      <Typography variant={'body1'} component={'p'}>
-        {t('youtube-channels.top-ten-channels.first-paragraph')}
-      </Typography>
-      <Typography variant={'body1'} component={'p'}>
-        {t('youtube-channels.top-ten-channels.second-paragraph')}
-      </Typography>
-    </>
-  );
-};
+    <Paragraph
+      text="youtube-channels.top-ten-channels.first-paragraph"
+    />
+    <Paragraph
+      text="youtube-channels.top-ten-channels.second-paragraph"
+    />
+  </>
+);
