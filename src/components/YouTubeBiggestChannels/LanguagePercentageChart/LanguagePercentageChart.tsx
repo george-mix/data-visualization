@@ -20,7 +20,7 @@ const translateWidth = radius * coefficient;
 const translateHeight = radius;
 const donutInnerRadius = radius * 0.6;
 const donutOutterRadius = radius * 0.7;
-const labelRadius = radius * 0.76;
+const labelRadius = radius * 0.8;
 
 export const LanguagePercentageChart: React.FC<ChartProps> = ({data}) => {
   const {
@@ -78,12 +78,12 @@ export const LanguagePercentageChart: React.FC<ChartProps> = ({data}) => {
         <FormControlLabel
           value="channels"
           control={<Radio />}
-          label="Number of Channels"
+          label="Number of channels"
         />
         <FormControlLabel
           value="subscribers"
           control={<Radio />}
-          label="Percentage of Subscribers"
+          label="Percentage of subscribers"
         />
       </RadioGroup>
     </>
