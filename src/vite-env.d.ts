@@ -2,6 +2,7 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
+  readonly VITE_UNPKG_BASE_URL: string;
   readonly VITE_WORLD_ATLAS_JSON_URL_110M: string;
   readonly VITE_GITHUB_LINK: string;
   readonly VITE_TELEGRAM_LINK: string;
