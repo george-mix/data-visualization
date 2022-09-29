@@ -62,6 +62,7 @@ export const lightThemeColorSchemes: ColorSchemes = {
     '#5d3a35',
     '#3a2d39',
   ],
+  interpolationOne: ['#a3d4b5', '#1c3b48'],
 };
 
 export const darkThemeColorSchemes: ColorSchemes = {
@@ -77,4 +78,5 @@ export const darkThemeColorSchemes: ColorSchemes = {
     '#734638',
     '#bf6b52',
   ],
+  interpolationOne: ['#bac3b8', '#3a655b'],
 };

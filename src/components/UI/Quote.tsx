@@ -10,7 +10,7 @@ type QuoteProps = TextComponentProps & {
 };
 
 export const Quote: React.FC<QuoteProps> = ({text, author, sx, authorSx}) => (
-  <Figure>
+  <Figure sx={{pb: 0}}>
     <Box
       component="blockquote"
       sx={{

@@ -37,6 +37,7 @@ export interface ProjectGoal {
 
 export interface ColorSchemes {
   schemeOne: string[];
+  interpolationOne: string[];
 }
 
 // article data interfaces
