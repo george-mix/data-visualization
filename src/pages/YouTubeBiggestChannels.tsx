@@ -6,6 +6,7 @@ import {SourceArticleList} from '@helpers/common/enums';
 import {Languages} from '@components/YouTubeBiggestChannels/Languages';
 import {PageHeader} from '@components/PageHeader';
 import {Paragraph} from '@components/UI/Paragraph';
+import {Countries} from '@components/YouTubeBiggestChannels/Countries';
 
 const YouTubeBiggestChannels: React.FC = () => {
   const [youtubeCahnnelsData, isLoading, isError] = useYouTubeData();
@@ -25,6 +26,12 @@ const YouTubeBiggestChannels: React.FC = () => {
       />
 
       <Languages
+        data={youtubeCahnnelsData}
+        isLoading={isLoading}
+        isError={isError}
+      />
+
+      <Countries
         data={youtubeCahnnelsData}
         isLoading={isLoading}
         isError={isError}

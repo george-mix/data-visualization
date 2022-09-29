@@ -23,7 +23,7 @@ export const ColorLegendItem: React.FC<ColorLegendItemProps> = ({
       <text
         fontSize="1.5em"
         y="0.32em"
-        x="0.7em"
+        x="0.9em"
         fill={theme.palette.text.primary}
       >
         {text}
