@@ -52,6 +52,12 @@
       "second-paragraph": "English is the most popular language among the channels with the most subscribers, with 22 channels and 45% of subscribers speaking it. Next comes Hindi with 15 channels and 33% of subscribers. These two languages make up over 70 percent of the top 50.",
       "third-paragraph": "The biggest surprise for me was Bhojpuri, which I didn't even know existed. It is considered to be a dialect of Hindi, but have a status of recognized national language. So, two of the six languages present came from India - impressive!"
     },
+    "content-categories": {
+      "subheader": "Content categories",
+      "caption": "content categories featured in the top 50 channels",
+      "first-paragraph": "The top 50 includes 9 content categories. The rating is dominated by music channels: 23 channels represent this category. \"Entertainment\" is in second place with twelve channels.",
+      "second-paragraph": "The list continues with \"Education\", which has 4, and \"Film\" (3). \"Games\" and \"Sports\" each have two channels, while \"How-to\", \"News\", and \"Comedy\" only have one each."
+    },
     "countries": {
       "subheader": "Countries",
       "caption": "world map showing distribution of channels from the top 50",
