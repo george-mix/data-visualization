@@ -1,7 +1,9 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import EmailIcon from '@mui/icons-material/Email';
-import {ColorSchemes, ProjectGoal, SocialMedia} from './interfaces';
+import {AppPalette, ColorSchemes, ProjectGoal, SocialMedia} from './interfaces';
+import {Colors} from './enums';
+import {alpha} from '@mui/material';
 
 export const suppportedLanguages = ['EN', 'RU'];
 
@@ -49,34 +51,66 @@ export const technologyStackList = [
   'D3',
 ];
 
+export const lightThemePalette: AppPalette = {
+  text: Colors.RichBlack,
+  background: Colors.Snow,
+  neutral: alpha(Colors.LiverChestnut, 0.3),
+  primary: Colors.IndigoDye,
+  secondary: Colors.PastelPink,
+  info: Colors.NeonSilver,
+  infoLight: alpha(Colors.NeonSilver, 0.07),
+  success: Colors.PigmentGreen,
+  warning: Colors.Citrine,
+  error: Colors.Red,
+  accentOne: Colors.QuartzGray,
+  accentTwo: Colors.QueenBlue,
+  accentThree: Colors.QuickSilver,
+};
+
+export const darkThemePalette: AppPalette = {
+  text: Colors.Snow,
+  background: Colors.RaisinBlack,
+  neutral: alpha(Colors.NeonSilver, 0.22),
+  primary: Colors.PastelBlue,
+  secondary: Colors.CadetGray,
+  info: Colors.NeonSilver,
+  infoLight: alpha(Colors.NeonSilver, 0.01),
+  success: Colors.UfoGreen,
+  warning: Colors.Golden,
+  error: Colors.Scarlet,
+  accentOne: Colors.PaleCerulean,
+  accentTwo: Colors.CoralPink,
+  accentThree: Colors.OldRose,
+};
+
 export const lightThemeColorSchemes: ColorSchemes = {
   schemeOne: [
-    '#456b86',
-    '#d7b1b3',
-    '#bbc5d5',
-    '#a6978b',
-    '#788cae',
-    '#90756f',
-    '#6f6764',
-    '#a0968f',
-    '#5d3a35',
-    '#3a2d39',
+    Colors.LightGray,
+    Colors.IndigoDye,
+    Colors.CentennialRose,
+    Colors.BlueDam,
+    Colors.Identity,
+    Colors.ArrowheadLake,
+    Colors.StormyWeather,
+    Colors.PoppyRed,
+    Colors.Tarawera,
   ],
-  interpolationOne: ['#a3d4b5', '#1c3b48'],
+  interpolationGreen: [Colors.TurquoiseGreen, Colors.TealGreen],
+  svgChartPalette: lightThemePalette,
 };
 
 export const darkThemeColorSchemes: ColorSchemes = {
   schemeOne: [
-    '#f8734b',
-    '#f08667',
-    '#cb5845',
-    '#d67754',
-    '#a24640',
-    '#c55b36',
-    '#b03824',
-    '#612613',
-    '#734638',
-    '#bf6b52',
+    Colors.BlueHeeler,
+    Colors.PastelBlue,
+    Colors.TurtleBay,
+    Colors.BlackishGreen,
+    Colors.DutchBlue,
+    Colors.FadedDenim,
+    Colors.StrawberrySpinachRed,
+    Colors.YellowOcher,
+    Colors.LilacBush,
   ],
-  interpolationOne: ['#bac3b8', '#3a655b'],
+  interpolationGreen: [Colors.AshGray, Colors.HookersGreen],
+  svgChartPalette: darkThemePalette,
 };

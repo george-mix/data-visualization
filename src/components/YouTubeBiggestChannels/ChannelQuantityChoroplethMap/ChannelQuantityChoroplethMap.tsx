@@ -25,7 +25,7 @@ export const ChannelQuantityChoroplethMap: React.FC<ChartProps> = ({
   data,
   worldAtlas,
 }) => {
-  const colors = useColorScheme('interpolationOne');
+  const colors = useColorScheme<string[]>('interpolationGreen');
 
   const countryChannels = group(data, (d) => d.country);
 

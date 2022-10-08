@@ -35,9 +35,26 @@ export interface ProjectGoal {
   description: string;
 }
 
+export interface AppPalette {
+  text: string;
+  background: string;
+  neutral: string;
+  primary: string;
+  secondary: string;
+  info: string;
+  infoLight: string;
+  success: string;
+  warning: string;
+  error: string;
+  accentOne: string;
+  accentTwo: string;
+  accentThree: string;
+}
+
 export interface ColorSchemes {
   schemeOne: string[];
-  interpolationOne: string[];
+  interpolationGreen: string[];
+  svgChartPalette: AppPalette;
 }
 
 // article data interfaces

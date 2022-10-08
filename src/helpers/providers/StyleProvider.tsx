@@ -1,6 +1,7 @@
 import React from 'react';
 import {CssBaseline, ThemeProvider, createTheme} from '@mui/material';
 import {useThemeMode} from '@helpers/hooks/useThemeMode';
+import {darkThemePalette, lightThemePalette} from '@helpers/common/data';
 
 const typography = {
   body2: {
@@ -15,32 +16,32 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     text: {
-      primary: '#fff9f5',
+      primary: darkThemePalette.text,
+    },
+    background: {
+      default: darkThemePalette.background,
     },
     primary: {
-      main: '#f7501f',
+      main: darkThemePalette.primary,
     },
     secondary: {
-      main: '#af4627',
-      contrastText: '#f9f0f0',
-    },
-    error: {
-      main: '#f60867',
-    },
-    warning: {
-      main: '#ffc375',
+      main: darkThemePalette.secondary,
+      contrastText: darkThemePalette.text,
     },
     info: {
-      main: '#6c3c2e',
+      main: darkThemePalette.info,
+      light: darkThemePalette.infoLight,
     },
     success: {
-      main: '#63af13',
+      main: darkThemePalette.success,
     },
-    divider: 'rgba(198,205,207,0.22)',
-    background: {
-      default: '#121b24',
-      paper: '#000704',
+    warning: {
+      main: darkThemePalette.warning,
     },
+    error: {
+      main: darkThemePalette.error,
+    },
+    divider: darkThemePalette.neutral,
   },
   typography,
 });
@@ -49,28 +50,29 @@ const lightTheme = createTheme({
   palette: {
     mode: 'light',
     text: {
-      primary: '#05141a',
+      primary: lightThemePalette.text,
     },
     primary: {
-      main: '#174668',
+      main: lightThemePalette.primary,
     },
     secondary: {
-      main: '#cd9ea0',
-      contrastText: '#05141a',
-    },
-    error: {
-      main: '#f40e0f',
-    },
-    warning: {
-      main: '#e5cb1e',
+      main: lightThemePalette.secondary,
+      contrastText: lightThemePalette.text,
     },
     info: {
-      main: '#c67861',
+      main: lightThemePalette.info,
+      light: lightThemePalette.infoLight,
     },
     success: {
-      main: '#1ea65e',
+      main: lightThemePalette.success,
     },
-    divider: 'rgba(87,55,59,0.29)',
+    warning: {
+      main: lightThemePalette.warning,
+    },
+    error: {
+      main: lightThemePalette.error,
+    },
+    divider: lightThemePalette.neutral,
   },
   typography,
 });

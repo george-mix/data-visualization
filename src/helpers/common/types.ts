@@ -2,6 +2,7 @@ import {SVGProps} from 'react';
 import {SvgIconTypeMap, SxProps} from '@mui/material';
 import {OverridableComponent} from '@mui/material/OverridableComponent';
 import {GeoPath, GeoPermissibleObjects} from 'd3';
+import {AppPalette} from './interfaces';
 
 export type KeysOfType<T, V> = keyof {
   [P in keyof T as T[P] extends V? P: never]: any
@@ -24,3 +25,10 @@ export type GeoPathProps = {
 export type GeoPathWithArgumentProps = GeoPathProps & {
   pathArgument: GeoPermissibleObjects;
 }
+
+export type SvgChartPaletteColor = KeysOfType<AppPalette, string>;
+
+export type SvgChartColorObject = {
+  color?: SvgChartPaletteColor;
+  alpha?: number;
+};

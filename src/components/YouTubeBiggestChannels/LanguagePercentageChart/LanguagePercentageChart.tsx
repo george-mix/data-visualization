@@ -30,7 +30,7 @@ export const LanguagePercentageChart: React.FC<ChartProps> = ({data}) => {
     infoType,
   } = useChangeLanguageInfo(data);
 
-  const colorScheme = useColorScheme('schemeOne');
+  const colorScheme = useColorScheme<string[]>('schemeOne');
   const colors = scaleOrdinal(colorScheme);
 
   const createPie = pie<LanguageInfo>()

@@ -1,11 +1,15 @@
 import {darkThemeColorSchemes, lightThemeColorSchemes} from '@helpers/common/data';
-import {ColorSchemes} from '@helpers/common/interfaces';
+import {AppPalette, ColorSchemes} from '@helpers/common/interfaces';
 import {KeysOfType} from '@helpers/common/types';
 import {useThemeMode} from './useThemeMode';
 
-type UseColorSchemeProps = KeysOfType<ColorSchemes, string[]>
+type ColorSchemeReturnOptions = string[] | AppPalette;
 
-export const useColorScheme = (schemeName: UseColorSchemeProps) => {
+type UseColorSchemeProps<T > = KeysOfType<ColorSchemes, T>
+
+export const useColorScheme = <T extends ColorSchemeReturnOptions>(
+  schemeName: UseColorSchemeProps<T>,
+) => {
   const {themeMode} = useThemeMode();
 
   const colorSchemes = themeMode === 'light'
