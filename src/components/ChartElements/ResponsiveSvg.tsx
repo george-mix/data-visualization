@@ -1,10 +1,12 @@
 import React from 'react';
 
 type ResponsiveSvgProps = {
-  width: number,
-  height: number,
-  translateWidth: number,
-  translateHeight: number,
+  width: number;
+  height: number;
+  translateWidth: number;
+  translateHeight: number;
+  maxWidth?: number;
+  maxHeight?: number;
 }
 
 export const ResponsiveSvg: React.FC<ResponsiveSvgProps> = ({
@@ -13,8 +15,16 @@ export const ResponsiveSvg: React.FC<ResponsiveSvgProps> = ({
   translateWidth,
   translateHeight,
   children,
+  maxWidth = width,
+  maxHeight = height,
 }) => (
-  <svg viewBox={`0 0 ${width} ${height}`}>
+  <svg
+    style={{
+      maxWidth,
+      maxHeight,
+    }}
+    viewBox={`0 0 ${width} ${height}`}
+  >
     <g transform={`translate(${translateWidth},${translateHeight})`}>
       {children}
     </g>

@@ -11,7 +11,8 @@ export const FigureCaption: React.FC<TextComponentProps> = ({text, sx}) => (
       color: 'info.dark',
       textAlign: 'center',
       lineBreak: 'normal',
-      pt: 1,
+      p: 1,
+      pb: 0,
       ...sx,
     }}
   />

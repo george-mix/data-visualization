@@ -1,23 +1,16 @@
 import React from 'react';
-import {List, ListItem, ListItemText} from '@mui/material';
+import {Box, List, ListItem, ListItemText} from '@mui/material';
 import {useTranslation} from 'react-i18next';
-import {TranslatedTypography} from '@components/UI/TranslatedTypography';
 import {mainRoutes} from '@router/routes';
 import {RouterLink} from '@components/UI/RouterLink';
+import {FooterCategorySubheader} from './FooterCategorySubheader';
 
 export const PageList: React.FC = () => {
   const {t} = useTranslation();
 
   return (
-    <>
-      <TranslatedTypography
-        translation="common.pages"
-        component="h2"
-        variant="h6"
-        sx={{
-          color: 'primary.main',
-        }}
-      />
+    <Box>
+      <FooterCategorySubheader text="common.pages" />
       <List>
         {mainRoutes.map((route) => (
           <ListItem
@@ -38,6 +31,6 @@ export const PageList: React.FC = () => {
           </ListItem>
         ))}
       </List>
-    </>
+    </Box>
   );
 };

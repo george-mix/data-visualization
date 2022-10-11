@@ -10,9 +10,7 @@ type PageHeaderProps = {
 export const PageHeader: React.FC<PageHeaderProps> = ({headline}) => (
   <>
     <Headline text={headline} />
-
-    <Divider sx={{pt: 6, pb: 6}}>
-      <SocialMediaLinks />
-    </Divider>
+    <SocialMediaLinks />
+    <Divider sx={{mb: 2}} />
   </>
 );

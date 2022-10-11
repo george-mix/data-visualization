@@ -1,31 +1,45 @@
 import React from 'react';
-import {Box, SxProps} from '@mui/material';
-import {TextComponentProps} from '@helpers/common/types';
+import {Box} from '@mui/material';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import {TranslatedTypography} from './TranslatedTypography';
 import {Figure} from './Figure';
 
-type QuoteProps = TextComponentProps & {
+type QuoteProps = {
+  text: string;
   author: string;
-  authorSx?: SxProps;
 };
 
-export const Quote: React.FC<QuoteProps> = ({text, author, sx, authorSx}) => (
-  <Figure sx={{pb: 0}}>
+export const Quote: React.FC<QuoteProps> = ({text, author}) => (
+  <Figure>
     <Box
       component="blockquote"
       sx={{
-        maxWidth: 400,
+        m: 0,
       }}
     >
-      <TranslatedTypography
-        translation={text}
-        variant="body1"
-        component="p"
+      <Box
         sx={{
-          fontWeight: 300,
-          ...sx,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
-      />
+      >
+        <FormatQuoteIcon
+          sx={{
+            fontSize: 36,
+            color: 'primary.light',
+          }}
+        />
+        <TranslatedTypography
+          translation={text}
+          variant="body1"
+          component="p"
+          sx={{
+            fontWeight: 300,
+            p: 2,
+          }}
+        />
+      </Box>
       <Box
         component="figcaption"
         sx={{
@@ -39,7 +53,6 @@ export const Quote: React.FC<QuoteProps> = ({text, author, sx, authorSx}) => (
           component="span"
           sx={{
             fontWeight: 300,
-            ...authorSx,
           }}
         />
       </Box>

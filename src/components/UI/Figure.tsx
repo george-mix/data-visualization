@@ -13,7 +13,14 @@ export const Figure: React.FC<FigureProps> = ({children, caption, sx}) => (
     sx={{
       m: 0,
       overflow: 'hidden',
-      pb: 2,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      bgcolor: 'info.light',
+      borderRadius: 2,
+      p: 1,
+      mb: 2,
       ...sx,
     }}
   >

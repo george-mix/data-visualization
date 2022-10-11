@@ -7,6 +7,7 @@ export const CopyrightMessage: React.FC = () => (
     variant="body2"
     sx={{
       pt: 6,
+      textAlign: 'center',
     }}
   >
     ©2022

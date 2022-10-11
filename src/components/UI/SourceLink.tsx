@@ -17,9 +17,14 @@ export const SourceLink: React.FC<SourceLinkProps> = ({link, sx}) => {
         m: 0,
         ...sx,
       }}
-
     >
-      <Link href={link}>
+      <Link
+        href={link}
+        sx={{
+          color: 'secondary.main',
+          textDecorationColor: (theme) => theme.palette.secondary.light,
+        }}
+      >
         {t('common.source')}
       </Link>
     </Box>

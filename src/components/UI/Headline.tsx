@@ -9,6 +9,7 @@ export const Headline: React.FC<TextComponentProps> = ({text, sx}) => (
     component="h1"
     sx={{
       fontWeight: 300,
+      overflowWrap: 'break-word',
       textAlign: 'center',
       ...sx,
     }}
