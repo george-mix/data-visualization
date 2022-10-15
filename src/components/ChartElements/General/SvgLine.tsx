@@ -10,7 +10,7 @@ export const SvgLine: React.FC<SvgLineProps> = ({
   lineStroke,
   ...lineProps
 }) => {
-  const strokeColor = useSvgChartPaletteColor(lineStroke?.color || 'neutral', lineStroke?.alpha);
+  const strokeColor = useSvgChartPaletteColor(lineStroke);
 
   return (
     <line

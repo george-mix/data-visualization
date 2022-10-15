@@ -1,13 +1,29 @@
 import {alpha} from '@mui/material';
 import {useColorScheme} from './useColorScheme';
 import {AppPalette} from '@helpers/common/interfaces';
-import {SvgChartPaletteColor} from '@helpers/common/types';
+import {SvgChartColorObject, SvgChartPaletteColor} from '@helpers/common/types';
 
-type UseSvgChartPaletteColor = (_colorName: SvgChartPaletteColor, _alphaValue?: number) => string;
+type UseSvgChartPaletteColor = (
+  _colorObject?: boolean | SvgChartColorObject,
+  _defaultColor?: SvgChartPaletteColor,
+) => string | undefined;
 
-export const useSvgChartPaletteColor: UseSvgChartPaletteColor = (colorName, alphaValue) => {
+export const useSvgChartPaletteColor: UseSvgChartPaletteColor = (
+  colorObject,
+  defaultColor = 'neutral',
+) => {
   const svgPalette = useColorScheme<AppPalette>('svgChartPalette');
+
+  if (colorObject === false) {
+    return undefined;
+  }
+
+  if (colorObject === true) {
+    return svgPalette[defaultColor];
+  }
+
+  const colorName = colorObject?.color || defaultColor;
   const color = svgPalette[colorName];
 
-  return alphaValue ? alpha(color, alphaValue) : color;
+  return colorObject?.alpha ? alpha(color, colorObject.alpha) : color;
 };

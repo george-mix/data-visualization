@@ -11,7 +11,7 @@ export const SvgText: React.FC<SvgTextProps> = ({
   textFill,
   ...textProps
 }) => {
-  const fillColor = useSvgChartPaletteColor(textFill?.color || 'text', textFill?.alpha);
+  const fillColor = useSvgChartPaletteColor(textFill, 'text');
 
   return (
     <text

@@ -10,7 +10,7 @@ export const SvgCircle: React.FC<SvgCircleProps> = ({
   circleFill,
   ...circleProps
 }) => {
-  const fillColor = useSvgChartPaletteColor(circleFill?.color || 'primary', circleFill?.alpha);
+  const fillColor = useSvgChartPaletteColor(circleFill, 'primary');
 
   return (
     <circle
