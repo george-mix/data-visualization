@@ -7,6 +7,7 @@ import {Languages} from '@components/YouTubeBiggestChannels/Languages';
 import {PageHeader} from '@components/PageHeader';
 import {Paragraph} from '@components/UI/Paragraph';
 import {Countries} from '@components/YouTubeBiggestChannels/Countries';
+import {ContentCategories} from '@components/YouTubeBiggestChannels/ContentCategories';
 
 const YouTubeBiggestChannels: React.FC = () => {
   const [youtubeCahnnelsData, isLoading, isError] = useYouTubeData();
@@ -30,6 +31,8 @@ const YouTubeBiggestChannels: React.FC = () => {
         isLoading={isLoading}
         isError={isError}
       />
+
+      <ContentCategories />
 
       <Countries
         data={youtubeCahnnelsData}
