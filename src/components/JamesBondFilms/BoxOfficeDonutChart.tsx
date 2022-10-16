@@ -11,7 +11,7 @@ import {
 } from 'd3';
 import {KeysOfType} from '@helpers/common/types';
 import {JamesBondFilmData} from '@helpers/common/interfaces';
-import {PieArc} from '@components/ChartElements/PieArc';
+import {PieArc} from '@components/ChartElements/Arc/PieArc';
 
 interface KeyPersonTotalBoxOffice {
   person: string,

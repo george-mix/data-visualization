@@ -2,12 +2,12 @@ import {useState} from 'react';
 import {flatRollup, rollups, sum} from 'd3';
 import {YouTubeChannelData} from '@helpers/common/interfaces';
 import {getPercentageString} from '@helpers/functions/mathUtils';
-import {InfoType, LanguageInfo} from './languagePercentageTypes';
+import {GetText, InfoType, LanguageInfo, SwitchQuantitySource} from './languagePercentageTypes';
 
 export const useChangeLanguageInfo = (data: YouTubeChannelData[]) => {
   const [infoType, setinfoType] = useState<InfoType>('channels');
 
-  const switchQuantitySource = () => {
+  const switchQuantitySource: SwitchQuantitySource = () => {
     const newInfoType = infoType === 'subscribers' ? 'channels' : 'subscribers';
     setinfoType(newInfoType);
   };
@@ -55,7 +55,7 @@ export const useChangeLanguageInfo = (data: YouTubeChannelData[]) => {
           accumulator + language.quantity,
         0,
       );
-      const getText = getSubscribersText(totalQuantity);
+      const getText: GetText = getSubscribersText(totalQuantity);
       return {
         languageData: getSubscribersLanguageData(),
         getText,

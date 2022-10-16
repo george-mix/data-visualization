@@ -34,3 +34,11 @@ export type GeoPathProps = {
   pathArgument: GeoPermissibleObjects;
   pathProps?: SvgPathProps;
 }
+
+export type SvgTextProps = SVGProps<SVGTextElement> & {
+  textFill?: SvgChartColorObject;
+}
+
+export type SvgPolylineProps = SVGProps<SVGPolylineElement> & {
+  polylineStroke?: SvgChartColorObject;
+}

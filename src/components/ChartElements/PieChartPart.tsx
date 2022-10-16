@@ -1,8 +1,8 @@
 import React, {PropsWithChildren} from 'react';
 import {Arc, PieArcDatum, ScaleOrdinal} from 'd3';
-import {ArcAnnotation, ArcAnnotationProps} from './ArcAnnotation';
-import {ArcPolyline, ArcPolylineProps} from './ArcPolyline';
-import {PieArc, PieArcProps} from './PieArc';
+import {ArcAnnotation, ArcAnnotationProps} from './Arc/ArcAnnotation';
+import {ArcPolyline, ArcPolylineProps} from './Arc/ArcPolyline';
+import {PieArc, PieArcProps} from './Arc/PieArc';
 
 type PieChartPartProps<T> = {
   arc: PieArcDatum<T>;
@@ -10,12 +10,11 @@ type PieChartPartProps<T> = {
   createAnnotationArc?: Arc<any, PieArcDatum<T>>;
   colors: ScaleOrdinal<string, string, never>;
   index: number;
-  isShowArc?: boolean;
   arcOptions?: Partial<PieArcProps<T>>;
   annotation?: string;
-  isShowAnnotation?: boolean;
+  showAnnotation?: boolean;
   annotationOptions?: Partial<ArcAnnotationProps<T>>;
-  isShowPolyline?: boolean;
+  showPolyline?: boolean;
   polylineOptions?: Partial<ArcPolylineProps<T>>;
 }
 
@@ -26,9 +25,9 @@ export const PieChartPart = <T, >({
   colors,
   index,
   arcOptions,
-  isShowPolyline = true,
+  showPolyline = true,
   polylineOptions,
-  isShowAnnotation = true,
+  showAnnotation = true,
   annotation,
   annotationOptions,
   children,
@@ -42,7 +41,7 @@ export const PieChartPart = <T, >({
       {...arcOptions}
     />
     {
-      isShowPolyline && <ArcPolyline
+      showPolyline && <ArcPolyline
         arc={arc}
         createArc={createArc}
         createAnnotationArc={createAnnotationArc || createArc}
@@ -50,7 +49,7 @@ export const PieChartPart = <T, >({
       />
     }
     {
-      isShowAnnotation && <ArcAnnotation
+      showAnnotation && <ArcAnnotation
         arc={arc}
         createAnnotationArc={createAnnotationArc || createArc}
         {...annotationOptions}

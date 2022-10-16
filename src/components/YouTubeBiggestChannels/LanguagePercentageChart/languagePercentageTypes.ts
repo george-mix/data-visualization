@@ -4,3 +4,7 @@ export interface LanguageInfo {
 }
 
 export type InfoType = 'subscribers' | 'channels';
+
+export type SwitchQuantitySource = () => void;
+
+export type GetText = (_languageData: LanguageInfo) => string;

@@ -26,14 +26,8 @@ const YouTubeBiggestChannels: React.FC = () => {
         isError={isError}
       />
 
-      <Languages
-        data={youtubeCahnnelsData}
-        isLoading={isLoading}
-        isError={isError}
-      />
-
+      <Languages />
       <ContentCategories />
-
       <Countries />
     </>
   );

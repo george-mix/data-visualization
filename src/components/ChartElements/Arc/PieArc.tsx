@@ -1,12 +1,13 @@
 import React from 'react';
 import {Arc, PieArcDatum, ScaleOrdinal} from 'd3';
+import {SvgPathProps} from '@helpers/common/types';
+import {SvgPath} from '../General/SvgPath';
 
-export type PieArcProps<T> = {
+export type PieArcProps<T> = SvgPathProps & {
   arc: PieArcDatum<T>;
   index: number;
   createArc: Arc<any, PieArcDatum<T>>;
   colors: ScaleOrdinal<string, string, never>;
-  pathProps?: React.SVGProps<SVGPathElement>;
 }
 
 export const PieArc = <T, >({
@@ -14,9 +15,9 @@ export const PieArc = <T, >({
   index,
   createArc,
   colors,
-  pathProps,
+  ...pathProps
 }: PieArcProps<T>) => (
-  <path
+  <SvgPath
     d={pathProps?.d || createArc(arc) || undefined}
     fill={pathProps?.fill || colors(index.toString())}
     {...pathProps}
