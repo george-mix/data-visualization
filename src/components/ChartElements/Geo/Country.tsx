@@ -1,17 +1,18 @@
 import React from 'react';
-import {GeoPathWithArgumentProps} from '@helpers/common/types';
-import {useTheme} from '@mui/material';
+import {GeoPathProps} from '@helpers/common/types';
+import {useColorScheme} from '@helpers/hooks/useColorScheme';
+import {AppPalette} from '@helpers/common/interfaces';
 import {GeoPathSvg} from './GeoPathSvg';
 
-export const Country: React.FC<GeoPathWithArgumentProps> = ({path, pathArgument, pathProps}) => {
-  const theme = useTheme();
+export const Country: React.FC<GeoPathProps> = ({path, pathArgument, pathProps}) => {
+  const {neutral} = useColorScheme<AppPalette>('svgChartPalette');
 
   return (
     <GeoPathSvg
       path={path}
       pathArgument={pathArgument}
       pathProps={{
-        fill: pathProps?.fill || theme.palette.divider,
+        fill: neutral,
         ...pathProps,
       }}
     />

@@ -1,5 +1,6 @@
 import React from 'react';
-import {useTheme} from '@mui/material';
+import {SvgText} from '@components/ChartElements/General/SvgText';
+import {SvgCircle} from '@components/ChartElements/General/SvgCircle';
 
 type ColorLegendItemProps = {
   translateWidth: number;
@@ -8,26 +9,24 @@ type ColorLegendItemProps = {
   text: string;
 }
 
+const fontSize = 18;
+const yOffset = 6;
+const xOffset = 14;
+
 export const ColorLegendItem: React.FC<ColorLegendItemProps> = ({
   translateWidth,
   translateHeight,
   color,
   text,
-}) => {
-  const theme = useTheme();
-  const colorCircleRadius = 12;
-
-  return (
-    <g transform={`translate(${translateWidth}, ${translateHeight})`}>
-      <circle r={colorCircleRadius} fill={color} />
-      <text
-        fontSize="1.5em"
-        y="0.32em"
-        x="0.9em"
-        fill={theme.palette.text.primary}
-      >
-        {text}
-      </text>
-    </g>
-  );
-};
+}) => (
+  <g transform={`translate(${translateWidth}, ${translateHeight})`}>
+    <SvgCircle fill={color} />
+    <SvgText
+      fontSize={fontSize}
+      y={yOffset}
+      x={xOffset}
+    >
+      - {text}
+    </SvgText>
+  </g>
+);

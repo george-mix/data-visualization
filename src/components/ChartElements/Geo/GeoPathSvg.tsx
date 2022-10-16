@@ -1,8 +1,9 @@
 import React from 'react';
-import {GeoPathWithArgumentProps} from '@helpers/common/types';
+import {GeoPathProps} from '@helpers/common/types';
+import {SvgPath} from '../General/SvgPath';
 
-export const GeoPathSvg: React.FC<GeoPathWithArgumentProps> = ({path, pathArgument, pathProps}) => (
-  <path
+export const GeoPathSvg: React.FC<GeoPathProps> = ({path, pathArgument, pathProps}) => (
+  <SvgPath
     d={path(pathArgument) ?? undefined}
     {...pathProps}
   />

@@ -1,10 +1,11 @@
 import React from 'react';
-import {GeoPathWithArgumentProps} from '@helpers/common/types';
-import {useTheme} from '@mui/material';
+import {GeoPathProps} from '@helpers/common/types';
+import {useColorScheme} from '@helpers/hooks/useColorScheme';
+import {AppPalette} from '@helpers/common/interfaces';
 import {GeoPathSvg} from './GeoPathSvg';
 
-export const Borders: React.FC<GeoPathWithArgumentProps> = ({path, pathArgument, pathProps}) => {
-  const theme = useTheme();
+export const Borders: React.FC<GeoPathProps> = ({path, pathArgument, pathProps}) => {
+  const {neutral} = useColorScheme<AppPalette>('svgChartPalette');
 
   return (
     <GeoPathSvg
@@ -12,7 +13,7 @@ export const Borders: React.FC<GeoPathWithArgumentProps> = ({path, pathArgument,
       pathArgument={pathArgument}
       pathProps={{
         fill: 'none',
-        stroke: theme.palette.divider,
+        stroke: neutral,
         ...pathProps,
       }}
     />

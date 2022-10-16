@@ -3,8 +3,8 @@ import React from 'react';
 type ResponsiveSvgProps = {
   width: number;
   height: number;
-  translateWidth: number;
-  translateHeight: number;
+  translateWidth?: number;
+  translateHeight?: number;
   maxWidth?: number;
   maxHeight?: number;
 }
@@ -12,8 +12,8 @@ type ResponsiveSvgProps = {
 export const ResponsiveSvg: React.FC<ResponsiveSvgProps> = ({
   width,
   height,
-  translateWidth,
-  translateHeight,
+  translateWidth = 0,
+  translateHeight = 0,
   children,
   maxWidth = width,
   maxHeight = height,

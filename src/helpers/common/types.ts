@@ -17,18 +17,20 @@ export type MuiIcon = OverridableComponent<SvgIconTypeMap<{}, 'svg'>> & {
   muiName: string;
 }
 
-export type GeoPathProps = {
-  path: GeoPath<any, GeoPermissibleObjects>;
-  pathProps?: SVGProps<SVGPathElement>;
-}
-
-export type GeoPathWithArgumentProps = GeoPathProps & {
-  pathArgument: GeoPermissibleObjects;
-}
-
 export type SvgChartPaletteColor = KeysOfType<AppPalette, string>;
 
 export type SvgChartColorObject = {
   color?: SvgChartPaletteColor;
   alpha?: number;
 };
+
+export type SvgPathProps = SVGProps<SVGPathElement> & {
+  pathFill?: SvgChartColorObject;
+  pathStroke?: SvgChartColorObject;
+}
+
+export type GeoPathProps = {
+  path: GeoPath<any, GeoPermissibleObjects>;
+  pathArgument: GeoPermissibleObjects;
+  pathProps?: SvgPathProps;
+}
