@@ -27,15 +27,15 @@ export const socialMediaList: SocialMedia[] = [
 
 export const projectGoals: ProjectGoal[] = [
   {
-    header: 'about.goals.learn-d3.header',
+    title: 'about.goals.learn-d3.title',
     description: 'about.goals.learn-d3.description',
   },
   {
-    header: 'about.goals.combine-d3-and-jsx.header',
+    title: 'about.goals.combine-d3-and-jsx.title',
     description: 'about.goals.combine-d3-and-jsx.description',
   },
   {
-    header: 'about.goals.compare-data.header',
+    title: 'about.goals.compare-data.title',
     description: 'about.goals.compare-data.description',
   },
 ];
@@ -58,7 +58,7 @@ export const lightThemePalette: AppPalette = {
   primary: Colors.IndigoDye,
   secondary: Colors.PastelPink,
   info: Colors.NeonSilver,
-  infoLight: alpha(Colors.NeonSilver, 0.07),
+  infoLight: alpha(Colors.NeonSilver, 0.1),
   success: Colors.PigmentGreen,
   warning: Colors.Citrine,
   error: Colors.Red,
@@ -74,7 +74,7 @@ export const darkThemePalette: AppPalette = {
   primary: Colors.PastelBlue,
   secondary: Colors.CadetGray,
   info: Colors.NeonSilver,
-  infoLight: alpha(Colors.NeonSilver, 0.01),
+  infoLight: alpha(Colors.NeonSilver, 0.1),
   success: Colors.UfoGreen,
   warning: Colors.Golden,
   error: Colors.Scarlet,

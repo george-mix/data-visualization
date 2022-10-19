@@ -31,7 +31,7 @@ export interface SocialMedia {
 }
 
 export interface ProjectGoal {
-  header: string;
+  title: string;
   description: string;
 }
 
