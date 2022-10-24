@@ -1,18 +1,10 @@
-import React, {useState} from 'react';
-import {Navbar} from './Navbar';
-import {Sidebar} from './Sidebar';
+import React from 'react';
+import {Drawer} from '@components/Drawer/Drawer';
+import {Header} from '@components/Header/Header';
 
-export const AppNavigation: React.FC = () => {
-  const [sidebar, setSidebar] = useState<boolean>(false);
-
-  const toggleSidebar = () => {
-    setSidebar(!sidebar);
-  };
-
-  return (
-    <>
-      <Navbar toggleSidebar={toggleSidebar} />
-      <Sidebar sidebar={sidebar} toggleSidebar={toggleSidebar} />
-    </>
-  );
-};
+export const AppNavigation: React.FC = () => (
+  <>
+    <Header />
+    <Drawer />
+  </>
+);

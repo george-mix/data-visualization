@@ -5,6 +5,8 @@ import {AppPalette, ColorSchemes, ProjectGoal, SocialMedia} from './interfaces';
 import {Colors} from './enums';
 import {alpha} from '@mui/material';
 
+export const appName = 'dataviz';
+
 export const suppportedLanguages = ['EN', 'RU'];
 
 export const socialMediaList: SocialMedia[] = [

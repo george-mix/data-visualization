@@ -10,7 +10,7 @@ export const LanguageSelector: React.FC = () => {
   };
 
   return (
-    <FormControl variant="filled" sx={{m: 1, minWidth: 120}}>
+    <FormControl variant="standard">
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"

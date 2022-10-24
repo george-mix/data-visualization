@@ -8,8 +8,8 @@ export const ThemeSelector: React.FC = () => {
   const {themeMode, handleThemeChange} = useThemeMode();
 
   return (
-    <IconButton onClick={handleThemeChange}>
-      {themeMode === 'light' ? <Brightness7Icon /> : <Brightness4Icon />}
+    <IconButton onClick={handleThemeChange} sx={{p: 0}}>
+      {themeMode === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
     </IconButton>
   );
 };
