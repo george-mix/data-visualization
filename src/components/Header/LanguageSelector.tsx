@@ -12,8 +12,7 @@ export const LanguageSelector: React.FC = () => {
   return (
     <FormControl variant="standard">
       <Select
-        labelId="demo-simple-select-label"
-        id="demo-simple-select"
+        id="select-language"
         value={currentLanguage}
         displayEmpty
         onChange={handleLanguageChange}

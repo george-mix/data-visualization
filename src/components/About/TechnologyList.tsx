@@ -10,7 +10,7 @@ export const TechnologyList: React.FC = () => (
     <List
       sx={{
         p: 0,
-        pl: 2,
+        pl: 4,
         listStyleType: 'disc',
       }}
     >

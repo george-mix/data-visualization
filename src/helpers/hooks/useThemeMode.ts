@@ -1,10 +1,10 @@
 import {useDispatch, useSelector} from 'react-redux';
-import {themeModeSelector} from '@store/theme/themeSelectors';
+import {themeSelector} from '@store/theme/themeSelectors';
 import {changeThemeMode} from '@store/theme/themeSlice';
 import {ThemeMode} from '@store/theme/themeTypes';
 
 export const useThemeMode = () => {
-  const themeMode = useSelector(themeModeSelector);
+  const {mode: themeMode} = useSelector(themeSelector);
   const dispatch = useDispatch();
 
   const handleThemeChange = () => {

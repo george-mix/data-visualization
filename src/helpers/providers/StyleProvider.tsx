@@ -52,6 +52,9 @@ const lightTheme = createTheme({
     text: {
       primary: lightThemePalette.text,
     },
+    background: {
+      default: lightThemePalette.background,
+    },
     primary: {
       main: lightThemePalette.primary,
     },

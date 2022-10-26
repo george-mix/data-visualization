@@ -17,11 +17,15 @@ export const Footer: React.FC = () => (
       }}
     >
       <Divider sx={{mb: 4}} />
-      <Box sx={{display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap'}}>
+      <Box
+        sx={{
+          pl: 2,
+        }}
+      >
         <SocialMediaList />
         <PageList />
+        <CopyrightMessage />
       </Box>
-      <CopyrightMessage />
     </Container>
   </>
 );

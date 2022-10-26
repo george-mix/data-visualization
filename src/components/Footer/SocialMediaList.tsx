@@ -8,7 +8,7 @@ export const SocialMediaList: React.FC = () => {
   const {t} = useTranslation();
 
   return (
-    <Box>
+    <Box sx={{pb: 2}}>
       <FooterCategorySubheader text="common.contacts" />
       <List>
         {socialMediaList.map((media) => (

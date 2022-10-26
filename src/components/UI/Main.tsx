@@ -6,7 +6,7 @@ export const Main: React.FC = ({children}) => (
     component="main"
     sx={{
       pt: 12,
-      pb: 6,
+      pb: 2,
       overflow: 'hidden',
     }}
   >

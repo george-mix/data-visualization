@@ -5,7 +5,7 @@ import {TranslatedTypography} from './TranslatedTypography';
 export const Subheader: React.FC<TextComponentProps> = ({text, sx}) => (
   <TranslatedTypography
     translation={text}
-    variant="h6"
+    variant="h4"
     component="h2"
     sx={{
       pb: 2,

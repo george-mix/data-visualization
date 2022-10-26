@@ -8,10 +8,11 @@ export const FigureCaption: React.FC<TextComponentProps> = ({text, sx}) => (
     variant="subtitle1"
     component="figcaption"
     sx={{
-      color: 'info.dark',
+      color: 'text.secondary',
       textAlign: 'center',
       lineBreak: 'normal',
       p: 1,
+      pt: 2,
       pb: 0,
       ...sx,
     }}

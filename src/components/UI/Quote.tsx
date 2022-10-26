@@ -45,6 +45,7 @@ export const Quote: React.FC<QuoteProps> = ({text, author}) => (
         sx={{
           display: 'flex',
           justifyContent: 'flex-end',
+          pr: 2,
         }}
       >
         <TranslatedTypography

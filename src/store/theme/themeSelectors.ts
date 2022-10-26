@@ -1,3 +1,3 @@
 import {RootState} from '../store';
 
-export const themeModeSelector = (state: RootState) => state.theme.mode;
+export const themeSelector = (state: RootState) => state.theme;
