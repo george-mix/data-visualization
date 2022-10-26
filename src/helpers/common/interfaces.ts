@@ -17,6 +17,7 @@ export interface ArticleRoute extends AppRoute {
   teaser: string;
   largeImage: string;
   tinyImage: string;
+  imageAlt: string;
 }
 
 export interface WorldAtlas {

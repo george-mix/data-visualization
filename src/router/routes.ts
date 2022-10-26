@@ -37,6 +37,7 @@ export const articleRoutes: ArticleRoute[] = [
     tinyImage: BondTinyImage,
     teaser: 'james-bond-films.teaser',
     icon: MovieIcon,
+    imageAlt: 'james-bond-films.image-alt'
   },
   {
     title: 'youtube-channels.title',
@@ -45,5 +46,6 @@ export const articleRoutes: ArticleRoute[] = [
     tinyImage: YouTubeTinyImage,
     teaser: 'youtube-channels.teaser',
     icon: YouTubeIcon,
+    imageAlt: 'youtube-channels.image-alt'
   },
 ];

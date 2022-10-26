@@ -1,16 +1,15 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material';
-import {FeedArticle} from './FeedArticle';
+import {Box} from '@mui/material';
 import {articleRoutes} from '@router/routes';
+import {FeedArticle} from './FeedArticle';
+import {Subheader} from '@components/UI/Subheader';
 
 export const Feed: React.FC = () => (
   <Box component="section" role="feed">
-    <Typography variant="h4" component="h2">
-        Articles
-    </Typography>
+    <Subheader text="Articles" />
+
     {articleRoutes.map((article) => (
       <FeedArticle key={article.path} article={article}/>
     ))}
   </Box>
 );
-

@@ -1,6 +1,5 @@
 {
   "common": {
-    "read-more": "Read more",
     "contacts": "Contacts",
     "pages": "Pages",
     "source": "See data source"
@@ -37,6 +36,7 @@
   "youtube-channels": {
     "title": "Most Popular YouTube Channels",
     "teaser": "Top 50 largest channels by the number of subscribers. Comparison by language, country and content category.",
+    "image-alt": "Drawing of a girl looking at her tablet",
     "introduction": "In this article, we take a look at the top 50 YouTube channels by subscriber count as of August 19, 2022.",
     "about-source": "All information about the channels was taken from the Wikipedia article: \"List of the most popular YouTube channels\".",
     "top-ten-channels": {
@@ -66,6 +66,7 @@
   },
   "james-bond-films": {
     "title": "James Bond Films",
-    "teaser": "Comparison of all films about Agent 007 by budget spent and box office. Let's take a look at the most popular actor, director and most successful film."
+    "teaser": "Comparison of all films about Agent 007 by budget spent and box office. Let's take a look at the most popular actor, director and most successful film.",
+    "image-alt": "James Bond pointing a gun"
   }
 }
