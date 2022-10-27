@@ -1,7 +1,7 @@
 import {alpha} from '@mui/material';
-import {useColorScheme} from './useColorScheme';
-import {AppPalette} from '@helpers/common/interfaces';
 import {SvgChartColorObject, SvgChartPaletteColor} from '@helpers/common/types';
+import {useSelector} from 'react-redux';
+import {themeSelector} from '@store/theme/themeSelectors';
 
 type UseSvgChartPaletteColor = (
   _colorObject?: boolean | SvgChartColorObject,
@@ -12,7 +12,8 @@ export const useSvgChartPaletteColor: UseSvgChartPaletteColor = (
   colorObject,
   defaultColor = 'neutral',
 ) => {
-  const svgPalette = useColorScheme<AppPalette>('svgChartPalette');
+  const {colorSchemes} = useSelector(themeSelector);
+  const svgPalette = colorSchemes.svgChartPalette;
 
   if (colorObject === false) {
     return undefined;
