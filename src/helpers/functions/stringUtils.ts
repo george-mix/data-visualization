@@ -1,1 +1,1 @@
-export const combineTwoStrings = (base: string, query: string) => `${base}${query}`;
+export const combineTwoStrings = (first: string, second: string) => `${first}${second}`;

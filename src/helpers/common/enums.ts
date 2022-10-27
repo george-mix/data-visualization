@@ -45,3 +45,8 @@ export enum Colors {
   'UfoGreen' = '#00d261',
   'YellowOcher' = '#c38f3f',
 };
+
+export enum SupportedLanguages {
+  'English' = 'EN',
+  'Russian' = 'RU',
+};

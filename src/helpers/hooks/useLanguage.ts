@@ -1,15 +1,27 @@
 import {useTranslation} from 'react-i18next';
-import {suppportedLanguages} from '@helpers/common/data';
+import {supportedLanguages} from '@helpers/common/data';
+import {SupportedLanguages} from '@helpers/common/enums';
+import {getItem, setItem} from '@helpers/services/localStorage';
 
 export const useLanguage = () => {
   const {i18n} = useTranslation();
-  const currentLanguage = i18n.resolvedLanguage.toUpperCase();
+  const currentLanguage = <SupportedLanguages>i18n.resolvedLanguage.toUpperCase();
 
-  const changeLanguage = (newLanguage: string) => {
+  const changeLanguage = (newLanguage: SupportedLanguages) => {
+    setItem('language', newLanguage);
     i18n.changeLanguage(newLanguage.toLowerCase());
   };
 
-  const languages = suppportedLanguages;
+  const savedLanguage = getItem('language');
+  if (!savedLanguage) {
+    setItem('language', currentLanguage);
+  }
 
-  return {currentLanguage, suppportedLanguages: languages, changeLanguage};
+  if (savedLanguage && savedLanguage !== currentLanguage) {
+    changeLanguage(savedLanguage);
+  }
+
+  const languages = supportedLanguages;
+
+  return {currentLanguage, supportedLanguages: languages, changeLanguage};
 };

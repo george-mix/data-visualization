@@ -3,6 +3,7 @@ import i18n from 'i18next';
 import {I18nextProvider, initReactI18next} from 'react-i18next';
 import HttpBackend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import {SupportedLanguages} from '@helpers/common/enums';
 
 i18n
   .use(HttpBackend)
@@ -10,7 +11,7 @@ i18n
   .use(initReactI18next)
   .init({
     load: 'languageOnly',
-    fallbackLng: 'en',
+    fallbackLng: SupportedLanguages.English.toLowerCase(),
     interpolation: {
       escapeValue: false,
     },

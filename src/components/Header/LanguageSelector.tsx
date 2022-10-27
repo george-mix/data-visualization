@@ -1,12 +1,14 @@
 import React from 'react';
 import {FormControl, MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import {useLanguage} from '@helpers/hooks/useLanguage';
+import {SupportedLanguages} from '@helpers/common/enums';
 
 export const LanguageSelector: React.FC = () => {
-  const {currentLanguage, suppportedLanguages, changeLanguage} = useLanguage();
+  const {currentLanguage, supportedLanguages, changeLanguage} = useLanguage();
 
-  const handleLanguageChange = (event: SelectChangeEvent) => {
-    changeLanguage(event.target.value);
+  const handleLanguageChange = (event: SelectChangeEvent<unknown>) => {
+    const language = event.target.value as SupportedLanguages;
+    changeLanguage(language);
   };
 
   return (
@@ -17,7 +19,7 @@ export const LanguageSelector: React.FC = () => {
         displayEmpty
         onChange={handleLanguageChange}
       >
-        {suppportedLanguages.map((language) =>
+        {supportedLanguages.map((language) =>
           <MenuItem
             key={language}
             value={language}

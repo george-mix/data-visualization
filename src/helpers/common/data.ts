@@ -2,12 +2,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import EmailIcon from '@mui/icons-material/Email';
 import {AppPalette, ColorSchemes, ProjectGoal, SocialMedia} from './interfaces';
-import {Colors} from './enums';
+import {Colors, SupportedLanguages} from './enums';
 import {alpha} from '@mui/material';
 
 export const appName = 'dataviz';
 
-export const suppportedLanguages = ['EN', 'RU'];
+export const supportedLanguages = [SupportedLanguages.English, SupportedLanguages.Russian];
 
 export const socialMediaList: SocialMedia[] = [
   {
