@@ -1,11 +1,14 @@
 import React from 'react';
-import {SvgLoader} from '@components/UI/SvgLoader';
-import {SvgError} from '@components/UI/SvgError';
+import {SvgLoader} from '@components/ChartElements/Status/SvgLoader';
+import {SvgError} from '@components/ChartElements/Status/SvgError';
 
 type SvgStatusProviderProps = {
   isLoading: boolean;
   isError: boolean;
 }
+
+const width = 640;
+const height = 360;
 
 export const SvgStatusProvider: React.FC<SvgStatusProviderProps> = ({
   children,
@@ -13,11 +16,11 @@ export const SvgStatusProvider: React.FC<SvgStatusProviderProps> = ({
   isError,
 }) => {
   if (isLoading) {
-    return <SvgLoader />;
+    return <SvgLoader width={width} height={height} />;
   }
 
   if (isError) {
-    return <SvgError />;
+    return <SvgError width={width} height={height} />;
   }
 
   return (
