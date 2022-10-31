@@ -1,5 +1,6 @@
 export enum SourceArticleList {
-  'YouTubeChannels' = 'https://en.wikipedia.org/wiki/List_of_most-subscribed_YouTube_channels'
+  'YouTubeChannels' = 'https://en.wikipedia.org/wiki/List_of_most-subscribed_YouTube_channels',
+  'JamesBondFilms' = 'https://en.wikipedia.org/wiki/List_of_James_Bond_films',
 };
 
 export enum Colors {

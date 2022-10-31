@@ -1,22 +1,18 @@
 import React from 'react';
-import {BoxOfficeDonutChart} from '@components/JamesBondFilms/BoxOfficeDonutChart';
-import {PopularityTimeline} from '@components/JamesBondFilms/PopularityTimeline';
-import {useJamesBondData} from '@helpers/hooks/useJamesBondData';
+import {PageHeader} from '@components/PageHeader';
+import {SourceArticleList} from '@helpers/common/enums';
+import {SourceLink} from '@components/UI/SourceLink';
+import {Paragraph} from '@components/UI/Paragraph';
 
-const JamesBondFilms: React.FC = () => {
-  const [parsedFilmData, isLoading] = useJamesBondData();
+const JamesBondFilms: React.FC = () => (
+  <>
+    <PageHeader headline="james-bond-films.title" />
 
-  if (isLoading) {
-    return <pre>Loading...</pre>;
-  }
+    <Paragraph text="james-bond-films.introduction" />
+    <Paragraph text="james-bond-films.about-source" />
+    <SourceLink link={SourceArticleList.JamesBondFilms} />
 
-  return (
-    <>
-      James bond Films
-      <BoxOfficeDonutChart data={parsedFilmData}/>
-      <PopularityTimeline data={parsedFilmData}/>
-    </>
-  );
-};
+  </>
+);
 
 export default JamesBondFilms;

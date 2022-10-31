@@ -67,6 +67,8 @@
   "james-bond-films": {
     "title": "James Bond Films",
     "teaser": "Comparison of all films about Agent 007 by budget spent and box office. Let's take a look at the most popular actor, director and most successful film.",
-    "image-alt": "James Bond pointing a gun"
+    "image-alt": "James Bond pointing a gun",
+    "introduction": "James Bond is a classic franchise that currently has 27 films. The first film was made in the 1960s, and the last, at the time of writing, in 2021. During this time, the main cast and crew changed several times. In this article, we will compare the financial success of these films and see how the key people involved in the production (actor and director) impacted the box office.",
+    "about-source": "All information about the films was taken from the Wikipedia article: \"List of James Bond films\"."
   }
 }

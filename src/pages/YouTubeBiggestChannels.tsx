@@ -14,7 +14,7 @@ const YouTubeBiggestChannels: React.FC = () => (
 
     <Paragraph text="youtube-channels.introduction" />
     <Paragraph text="youtube-channels.about-source" />
-    <SourceLink link={SourceArticleList.YouTubeChannels} sx={{pb: 1}} />
+    <SourceLink link={SourceArticleList.YouTubeChannels} />
 
     <TopTenChannels />
     <Languages />
