@@ -5,12 +5,14 @@ import {useSvgChartPaletteColor} from '@helpers/hooks/useSvgChartPaletteColor';
 type SvgCircleProps = React.SVGProps<SVGCircleElement> & {
   circleFill?: boolean | SvgChartColorObject;
   circleStroke?: boolean | SvgChartColorObject;
+  innerRef?: any,
 }
 
 export const SvgCircle: React.FC<SvgCircleProps> = ({
   circleFill = true,
   circleStroke = false,
   children,
+  innerRef,
   ...circleProps
 }) => {
   const fillColor = useSvgChartPaletteColor(circleFill, 'primary');
@@ -21,6 +23,7 @@ export const SvgCircle: React.FC<SvgCircleProps> = ({
       fill={fillColor || 'none'}
       r={10}
       stroke={strokeColor}
+      ref={innerRef}
       {...circleProps}
     >
       {children}
