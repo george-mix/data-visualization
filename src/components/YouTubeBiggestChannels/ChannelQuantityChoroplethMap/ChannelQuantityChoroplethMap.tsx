@@ -1,6 +1,6 @@
 import React from 'react';
-import {useWorldAtlas} from '@helpers/hooks/useWorldAtlas';
-import {useYouTubeData} from '@helpers/hooks/useYouTubeData';
+import {useWorldAtlas} from '@helpers/queries/useWorldAtlas';
+import {useYouTubeData} from '@helpers/queries/useYouTubeData';
 import {SvgStatusProvider} from '@helpers/providers/SvgStatusProvider';
 import {ChannelQuantitySvg} from './ChannelQuantitySvg';
 

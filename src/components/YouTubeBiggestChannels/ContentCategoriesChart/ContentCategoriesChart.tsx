@@ -1,5 +1,5 @@
 import React from 'react';
-import {useYouTubeData} from '@helpers/hooks/useYouTubeData';
+import {useYouTubeData} from '@helpers/queries/useYouTubeData';
 import {SvgStatusProvider} from '@helpers/providers/SvgStatusProvider';
 import {ContentCategoriesSvg} from './ContentCategoriesSvg';
 
