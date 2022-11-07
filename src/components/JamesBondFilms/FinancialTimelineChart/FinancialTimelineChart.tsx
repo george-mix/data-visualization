@@ -8,7 +8,13 @@ import {MoneyType, TimelineType} from './timelineTypes';
 
 export const FinancialTimelineChart: React.FC = () => {
   const [films, isLoading, isError] = useJamesBondData();
-  const {timelineType, setTimelineType, moneyType, setMoneyType, yValue} = useTimelineValues();
+  const {
+    timelineType,
+    setTimelineType,
+    moneyType,
+    setMoneyType,
+    yValue,
+  } = useTimelineValues();
 
   return (
     <>

@@ -1,5 +1,6 @@
 import React from 'react';
 import {ToggleButton, ToggleButtonGroup} from '@mui/material';
+import {useTranslation} from 'react-i18next';
 
 type ToggleButtonsProps<T> = {
   selectedValue: T;
@@ -7,11 +8,13 @@ type ToggleButtonsProps<T> = {
   values: T[];
 }
 
-export const ToggleButtons = <T, >({
+export const ToggleButtons = <T extends string, >({
   values,
   selectedValue,
   setSelectedValue,
 }: ToggleButtonsProps<T>) => {
+  const {t} = useTranslation();
+
   const handleValueChange = (
     event: React.MouseEvent<HTMLElement>,
     newValue: T | null,
@@ -36,7 +39,7 @@ export const ToggleButtons = <T, >({
       }}
     >
       {values.map((value, index) => (
-        <ToggleButton key={index} value={value as {}}>{value}</ToggleButton>
+        <ToggleButton key={index} value={value}>{t(value)}</ToggleButton>
       ))}
     </ToggleButtonGroup>
   );

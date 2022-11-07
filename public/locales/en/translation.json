@@ -69,6 +69,20 @@
     "teaser": "Comparison of all films about Agent 007 by budget spent and box office. Let's take a look at the most popular actor, director and most successful film.",
     "image-alt": "James Bond pointing a gun",
     "introduction": "James Bond is a classic franchise that currently has 27 films. The first film was made in the 1960s, and the last, at the time of writing, in 2021. During this time, the main cast and crew changed several times. In this article, we will compare the financial success of these films and see how the key people involved in the production (actor and director) impacted the box office.",
-    "about-source": "All information about the films was taken from the Wikipedia article: \"List of James Bond films\"."
+    "about-source": "All information about the films was taken from the Wikipedia article: \"List of James Bond films\".",
+    "common": {
+        "budget": "Budget",
+        "box-office": "Box office",
+        "profit": "Profit",
+        "actual-money": "Actual $",
+        "adjusted-money": "2005 $"
+    },
+    "financial-timeline": {
+      "subheader": "Financial timeline of James Bond films",
+      "caption": "Financial timeline of James Bond films. Hover over a dot to see info about a particular film.",
+      "first-paragraph": "It's safe to say that 2012's Skyfall is, if not the most popular James Bond movie of all time, then definitely one of the top three. It has the largest actual and inflation-adjusted box office receipts ($1,108.6 and $943.5 million respectively) and is in the top 3 films in terms of profit (in this article, profit is box office minus budget, which is not entirely correct, but I did not find more detailed data on profit).",
+      "second-paragraph": "In addition to Skyfall, 1965's Thunderball and 1964's Goldfinger are in the top three, with 2005-adjusted box office receipts of $848.1 million and $820.4 million, respectively. Their estimated adjusted earnings were even slightly higher than Skyfall's, but since the earnings are \"estimated\" I thought it would be fair if popularity was decided according to the box office.",
+      "third-paragraph": "If we talk about the most unsuccessful films of the franchise, then there are two of them: \"Casino Royale\" in 1967 and \"License to Kill\" in 1989. But they weren't flops either. Each managed to collect about $ 190 million in profits adjusted for 2005, which is not bad at all."
+    }
   }
 }
