@@ -83,6 +83,14 @@
       "first-paragraph": "It's safe to say that 2012's Skyfall is, if not the most popular James Bond movie of all time, then definitely one of the top three. It has the largest actual and inflation-adjusted box office receipts ($1,108.6 and $943.5 million respectively) and is in the top 3 films in terms of profit (in this article, profit is box office minus budget, which is not entirely correct, but I did not find more detailed data on profit).",
       "second-paragraph": "In addition to Skyfall, 1965's Thunderball and 1964's Goldfinger are in the top three, with 2005-adjusted box office receipts of $848.1 million and $820.4 million, respectively. Their estimated adjusted earnings were even slightly higher than Skyfall's, but since the earnings are \"estimated\" I thought it would be fair if popularity was decided according to the box office.",
       "third-paragraph": "If we talk about the most unsuccessful films of the franchise, then there are two of them: \"Casino Royale\" in 1967 and \"License to Kill\" in 1989. But they weren't flops either. Each managed to collect about $ 190 million in profits adjusted for 2005, which is not bad at all."
+    },
+    "actor-box-office": {
+      "subheader": "Box office receipts per Bond actor (in 2005 dollars)",
+      "controller-total": "Total box office",
+      "controller-average": "Average per film",
+      "caption": "Box office receipts of all the actors who played James Bond. Click on the arc to see actor information.",
+      "first-paragraph": "It's hard to say for sure which of the 007 agents is the most popular. But there are two clear contenders for this title. Sean Connery has the highest combined box office but has appeared in more films than Daniel Craig while the latter has the highest average box office per film. I would declare a draw 😉.",
+      "second-paragraph": "Though it is safe to say that the least popular actor to play the British agent was David Niven. He appeared in only one film (1967 \"Casino Royale\"), and this film was second from the bottom in terms of the box office. David also has the lowest box office average."
     }
   }
 }

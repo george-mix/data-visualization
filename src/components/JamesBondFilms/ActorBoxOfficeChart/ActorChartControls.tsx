@@ -1,8 +1,10 @@
 import React from 'react';
 import {FormControlLabel, Radio, RadioGroup} from '@mui/material';
+import {useTranslation} from 'react-i18next';
 import {useActorApi, useBoxOfficeContext} from './ActorChartContextProvider';
 
 export const ActorChartControls: React.FC = () => {
+  const {t} = useTranslation();
   const boxOfficeType = useBoxOfficeContext();
   const {switchBoxOfficeType} = useActorApi();
 
@@ -11,12 +13,12 @@ export const ActorChartControls: React.FC = () => {
       <FormControlLabel
         value="total"
         control={<Radio />}
-        label="Total box office"
+        label={t('james-bond-films.actor-box-office.controller-total')}
       />
       <FormControlLabel
         value="average"
         control={<Radio />}
-        label="Average per film"
+        label={t('james-bond-films.actor-box-office.controller-average')}
       />
     </RadioGroup>
   );

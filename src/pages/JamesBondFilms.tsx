@@ -4,6 +4,7 @@ import {SourceArticleList} from '@helpers/common/enums';
 import {SourceLink} from '@components/UI/SourceLink';
 import {Paragraph} from '@components/UI/Paragraph';
 import {FinancialTimeline} from '@components/JamesBondFilms/FinancialTimeline';
+import {ActorBoxOffice} from '@components/JamesBondFilms/ActorBoxOffice';
 
 const JamesBondFilms: React.FC = () => (
   <>
@@ -14,6 +15,7 @@ const JamesBondFilms: React.FC = () => (
     <SourceLink link={SourceArticleList.JamesBondFilms} />
 
     <FinancialTimeline />
+    <ActorBoxOffice />
   </>
 );
 
