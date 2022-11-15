@@ -38,6 +38,7 @@
         "no-plusplus": "error",
         "no-nested-ternary": "error",
         "no-unneeded-ternary": "error",
-        "arrow-body-style": ["error", "as-needed"]
+        "arrow-body-style": ["error", "as-needed"],
+        "no-useless-return": "off"
     }
 }

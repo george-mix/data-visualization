@@ -96,3 +96,30 @@ export interface JamesBondFilmData {
   budgetActual: number,
   budgetAdjusted: number,
 }
+
+// wiki interfaces
+export interface WikiThumbnail {
+  source: string;
+  width: number;
+  height: number;
+}
+
+export interface WikiPageInfo {
+  ns: number;
+  title: string;
+  missing?: boolean;
+  pageid?: number;
+  thumbnail?: WikiThumbnail;
+}
+
+export interface WikiQuery {
+  batchcomplete: boolean;
+  query: {
+    pages: WikiPageInfo[];
+  };
+}
+
+export interface PageThumbnail {
+  pageTitle: string;
+  thumbnailUrl: string | undefined
+}
