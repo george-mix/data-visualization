@@ -2,7 +2,8 @@
   "common": {
     "contacts": "Contacts",
     "pages": "Pages",
-    "source": "See data source"
+    "source": "See data source",
+    "articles": "Articles"
   },
   "home": {
     "title": "Home",

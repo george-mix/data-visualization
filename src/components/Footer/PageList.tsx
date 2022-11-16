@@ -1,36 +1,13 @@
 import React from 'react';
-import {Box, List, ListItem, ListItemText} from '@mui/material';
-import {useTranslation} from 'react-i18next';
-import {mainRoutes} from '@router/routes';
-import {RouterLink} from '@components/UI/RouterLink';
+import {Box, List} from '@mui/material';
 import {FooterCategorySubheader} from './FooterCategorySubheader';
+import {MainRouteLinks} from '@components/Navigation/MainRouteLinks';
 
-export const PageList: React.FC = () => {
-  const {t} = useTranslation();
-
-  return (
-    <Box sx={{pb: 2}}>
-      <FooterCategorySubheader text="common.pages" />
-      <List>
-        {mainRoutes.map((route) => (
-          <ListItem
-            key={route.title}
-            disableGutters
-            component="li"
-          >
-            <RouterLink
-              to={route.path}
-              sx={{
-                '& :hover': {
-                  color: 'primary.light',
-                },
-              }}
-            >
-              <ListItemText primary={t(`${route.title}`)} />
-            </RouterLink>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-};
+export const PageList: React.FC = () => (
+  <Box sx={{pb: 2}}>
+    <FooterCategorySubheader text="common.pages" />
+    <List>
+      <MainRouteLinks />
+    </List>
+  </Box>
+);

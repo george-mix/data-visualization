@@ -5,7 +5,7 @@ import {RouterLink} from '@components/UI/RouterLink';
 import {AppPaths} from '@router/routes';
 
 export const HeaderLogo: React.FC = () => (
-  <RouterLink to={AppPaths.Home}>
+  <RouterLink to={AppPaths.Home} mr= "auto">
     <Typography
       variant="h5"
       component="p"

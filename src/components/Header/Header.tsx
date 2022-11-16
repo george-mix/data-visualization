@@ -1,13 +1,14 @@
 import React from 'react';
-import {AppBar, Box, Container, IconButton, Toolbar} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import {AppBar, Box, Container, Toolbar, useMediaQuery, useTheme} from '@mui/material';
 import {LanguageSelector} from './LanguageSelector';
 import {ThemeSelector} from './ThemeSelector';
-import {useToggleDrawer} from '@helpers/hooks/useToggleDrawer';
 import {HeaderLogo} from './HeaderLogo';
+import {BurgerButton} from './BurgerButton';
+import {MainNav} from './MainNav';
 
 export const Header: React.FC = () => {
-  const {toggleDrawerState} = useToggleDrawer();
+  const theme = useTheme();
+  const isDownSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <AppBar
@@ -20,6 +21,7 @@ export const Header: React.FC = () => {
       <Container sx={{p: 0}}>
         <Toolbar sx={{bgcolor: 'background.default'}}>
           <HeaderLogo />
+          {!isDownSmall && <MainNav />}
           <Box
             sx={{
               display: 'flex',
@@ -32,16 +34,7 @@ export const Header: React.FC = () => {
           >
             <LanguageSelector />
             <ThemeSelector />
-            <IconButton
-              aria-label="menu"
-              onClick={toggleDrawerState}
-              sx={{
-                p: 0,
-                color: 'text.primary',
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
+            {isDownSmall && <BurgerButton />}
           </Box>
         </Toolbar>
       </Container>

@@ -6,10 +6,11 @@ import {
   MultiLineString,
 } from 'geojson';
 import {MuiIcon} from './types';
+import {AppPaths} from '@router/routes';
 
 export interface AppRoute {
   title: string;
-  path: string;
+  path: AppPaths;
   icon: MuiIcon;
 }
 
