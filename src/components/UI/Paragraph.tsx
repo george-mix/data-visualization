@@ -8,8 +8,9 @@ export const Paragraph: React.FC<TextComponentProps> = ({text, sx}) => (
     variant="body1"
     component="p"
     sx={{
-      pb: 1,
+      pb: 2,
       ...sx,
+      maxWidth: 840,
     }}
   />
 );

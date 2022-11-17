@@ -3,7 +3,7 @@ import {SourceLink} from '@components/UI/SourceLink';
 import {TopTenChannels} from '@components/YouTubeBiggestChannels/TopTenChannels';
 import {SourceArticleList} from '@helpers/common/enums';
 import {Languages} from '@components/YouTubeBiggestChannels/Languages';
-import {PageHeader} from '@components/PageHeader';
+import {PageHeader} from '@components/PageHeader/PageHeader';
 import {Paragraph} from '@components/UI/Paragraph';
 import {Countries} from '@components/YouTubeBiggestChannels/Countries';
 import {ContentCategories} from '@components/YouTubeBiggestChannels/ContentCategories';

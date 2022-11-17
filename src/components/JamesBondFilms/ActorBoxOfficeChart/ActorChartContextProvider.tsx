@@ -26,19 +26,19 @@ const reducer = (state: ActorState, action: ActorActions) => {
   }
 };
 
-const SelectedActorContext = createContext<ActorState['selectedIndex']>({} as ActorState['selectedIndex']);
-const ActorBoxOfficeApiContext = createContext<API>({} as API);
-const BoxOfficeContext = createContext<ActorState['boxOfficeType']>({} as ActorState['boxOfficeType']);
-
 const initialState: ActorState = {
   selectedIndex: 0,
   boxOfficeType: 'total',
 };
 
+const SelectedActorContext = createContext<ActorState['selectedIndex']>(initialState.selectedIndex);
+const ActorBoxOfficeApiContext = createContext<API>({} as API);
+const BoxOfficeContext = createContext<ActorState['boxOfficeType']>(initialState.boxOfficeType);
+
 export const ActorChartContextProvider: React.FC = ({children}) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const api = useMemo(() => {
+  const api: API = useMemo(() => {
     const changeSelectedIndex = (index: number) => {
       dispatch({type: 'changeSelectedIndex', index});
     };

@@ -1,5 +1,5 @@
 import React from 'react';
-import {CssBaseline, ThemeProvider, createTheme} from '@mui/material';
+import {CssBaseline, ThemeProvider, createTheme, responsiveFontSizes} from '@mui/material';
 import {useThemeMode} from '@helpers/hooks/useThemeMode';
 import {darkThemePalette, lightThemePalette} from '@helpers/common/data';
 
@@ -83,9 +83,10 @@ const lightTheme = createTheme({
 export const StyleProvider: React.FC = ({children}) => {
   const {themeMode} = useThemeMode();
   const theme = themeMode === 'light' ? lightTheme : darkTheme;
+  const responsiveTheme = responsiveFontSizes(theme);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={responsiveTheme}>
       <CssBaseline />
       {children}
     </ThemeProvider>

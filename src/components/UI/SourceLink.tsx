@@ -15,7 +15,7 @@ export const SourceLink: React.FC<SourceLinkProps> = ({link, sx}) => {
       component="p"
       sx={{
         m: 0,
-        pb: 1,
+        pb: 2,
         ...sx,
       }}
     >

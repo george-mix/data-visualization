@@ -48,6 +48,8 @@
     },
     "languages": {
       "subheader": "Languages",
+      "controller-number": "Number of channels",
+      "controller-percentage": "Percentage of subscribers",
       "caption": "percentage of languages among the top 50 channels",
       "first-paragraph": "If the information provided by the source is correct, only six languages are used among the top 50 channels. The chart above shows the ratio of these languages sorted by number of channels or percentage of subscribers.",
       "second-paragraph": "English is the most popular language among the channels with the most subscribers, with 22 channels and 45% of subscribers speaking it. Next comes Hindi with 15 channels and 33% of subscribers. These two languages make up over 70 percent of the top 50.",

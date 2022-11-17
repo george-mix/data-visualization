@@ -1,7 +1,7 @@
 import React from 'react';
 import {Divider} from '@mui/material';
+import {Headline} from '@components/UI/Headline';
 import {SocialMediaLinks} from './SocialMediaLinks';
-import {Headline} from './UI/Headline';
 
 type PageHeaderProps = {
   headline: string;

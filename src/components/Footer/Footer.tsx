@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
               <Box
                 sx={{
                   display: 'flex',
-                  gap: 6,
+                  gap: '10%',
                 }}
               >
                 <SocialMediaList />
