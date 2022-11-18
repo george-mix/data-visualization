@@ -1,5 +1,5 @@
 import React from 'react';
-import {CardMedia} from '@mui/material';
+import {CardMedia, useMediaQuery, useTheme} from '@mui/material';
 import {useTranslation} from 'react-i18next';
 import {useProgressiveImageLoad} from '@helpers/hooks/useProgressiveImageLoad';
 
@@ -16,17 +16,20 @@ export const ArticleImage: React.FC<ArticleImageProps> = ({
 }) => {
   const {t} = useTranslation();
   const [imageSource, isLoading] = useProgressiveImageLoad(imageSrc, placeholderSrc);
+  const theme = useTheme();
+  const isUpMedium = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <CardMedia
       component="img"
       image={imageSource}
-      height="180"
+      height={isUpMedium ? '100%' : 180}
       alt={t(alt)}
       sx={{
         filter: isLoading ? 'blur(10px)' : 'blur(0px)',
         transition: 'filter 0.5s linear',
         clipPath: isLoading ? 'inset(0)' : 'none',
+        width: '100%',
       }}
     />
   );
