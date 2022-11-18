@@ -8,6 +8,7 @@ export const Main: React.FC = ({children}) => (
       pt: 12,
       pb: 2,
       overflow: 'hidden',
+      minHeight: '84vh',
     }}
   >
     {children}
