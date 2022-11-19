@@ -1,0 +1,99 @@
+{
+  "common": {
+    "contacts": "Contacts",
+    "pages": "Pages",
+    "source": "See data source",
+    "articles": "Articles"
+  },
+  "home": {
+    "title": "Home",
+    "hero-section": {
+      "header": "Data visualization collection",
+      "welcome-message": "Welcome to dataviz: small collection of charts designed to compare various data from all over the world.",
+      "description": "Every chart on this website was created using D3.js, a popular JavaScript library for producing dynamic, interactive data visualizations in web browsers.",
+      "quote": "The greatest value of a picture is when it forces us to notice what we never expected to see.",
+      "quote-author": "John Tukey"
+    }
+  },
+  "about": {
+    "title": "About",
+    "goals": {
+      "subheader": "This website is a pet project created with the following goals in mind:",
+      "learn-d3": {
+        "title": "Learn to manipulate SVG with D3.js",
+        "description": "There are many libraries that allow you to create SVG charts, but D3 is the most famous of them. D3 can give more control over the visualizations you plan to create, has a large community and infrastructure."
+      },
+      "combine-d3-and-jsx": {
+        "title": "Learn to combine D3.js with JSX",
+        "description": "For some reason, most of the D3 tutorials and examples use the imperative chaining syntax. But nowadays web developers gravitate towards using a declarative approach (React, Vue). It turns out you can use D3 declaratively as well. Therefore, one of the goals of creating the project was to learn how to combine two wonderful tools."
+      },
+      "compare-data": {
+        "title": "Visualize and compare intresting data",
+        "description": "Can't tell for sure if it's a 'goal' or not. I just love to compare things 😉"
+      }
+    },
+    "technologies": "Stack of technologies used in the process:"
+  },
+  "youtube-channels": {
+    "title": "Most Popular YouTube Channels",
+    "teaser": "Top 50 largest channels by the number of subscribers. Comparison by language, country and content category.",
+    "image-alt": "Drawing of a girl looking at her tablet",
+    "introduction": "In this article, we take a look at the top 50 YouTube channels by subscriber count as of August 19, 2022.",
+    "about-source": "All information about the channels was taken from the Wikipedia article: \"List of the most popular YouTube channels\".",
+    "top-ten-channels": {
+      "subheader": "Top 10 channels by amount of subscribers",
+      "caption": "top 10 channels",
+      "first-paragraph": "As we can see, the Indian music channel T-series confidently holds the first place. The number of T-series subscribers is more than 1.5 times the number of subscribers of the nearest pursuer.",
+      "second-paragraph": "Interestingly, although there are representatives of 5 countries in the top ten, there are only two broadcast languages: English and Hindi."
+    },
+    "languages": {
+      "subheader": "Languages",
+      "controller-number": "Number of channels",
+      "controller-percentage": "Percentage of subscribers",
+      "caption": "percentage of languages among the top 50 channels",
+      "first-paragraph": "If the information provided by the source is correct, only six languages are used among the top 50 channels. The chart above shows the ratio of these languages sorted by number of channels or percentage of subscribers.",
+      "second-paragraph": "English is the most popular language among the channels with the most subscribers, with 22 channels and 45% of subscribers speaking it. Next comes Hindi with 15 channels and 33% of subscribers. These two languages make up over 70 percent of the top 50.",
+      "third-paragraph": "The biggest surprise for me was Bhojpuri, which I didn't even know existed. It is considered to be a dialect of Hindi, but have a status of recognized national language. So, two of the six languages present came from India - impressive!"
+    },
+    "content-categories": {
+      "subheader": "Content categories",
+      "caption": "content categories featured in the top 50 channels",
+      "first-paragraph": "The top 50 includes 9 content categories. The rating is dominated by music channels: 23 channels represent this category. \"Entertainment\" is in second place with twelve channels.",
+      "second-paragraph": "The list continues with \"Education\", which has 4, and \"Film\" (3). \"Games\" and \"Sports\" each have two channels, while \"How-to\", \"News\", and \"Comedy\" only have one each."
+    },
+    "countries": {
+      "subheader": "Countries",
+      "caption": "world map showing distribution of channels from the top 50",
+      "first-paragraph": "India is the country with the most channels in the top 50. In second place is the USA. Apart from these two, the channels are fairly evenly distributed among the countries that made it to the top - each country has one or two channels. But in fact, most countries do not have channels that represent them."
+    }
+  },
+  "james-bond-films": {
+    "title": "James Bond Films",
+    "teaser": "Comparison of all films about Agent 007 by budget spent and box office. Let's take a look at the most popular actor, director and most successful film.",
+    "image-alt": "James Bond pointing a gun",
+    "introduction": "James Bond is a classic franchise that currently has 27 films. The first film was made in the 1960s, and the last, at the time of writing, in 2021. During this time, the main cast and crew changed several times. In this article, we will compare the financial success of these films and see how the key people involved in the production (actor and director) impacted the box office.",
+    "about-source": "All information about the films was taken from the Wikipedia article: \"List of James Bond films\".",
+    "common": {
+        "budget": "Budget",
+        "box-office": "Box office",
+        "profit": "Profit",
+        "actual-money": "Actual $",
+        "adjusted-money": "2005 $"
+    },
+    "financial-timeline": {
+      "subheader": "Financial timeline of James Bond films",
+      "caption": "Financial timeline of James Bond films. Hover over a dot to see info about a particular film.",
+      "first-paragraph": "It's safe to say that 2012's Skyfall is, if not the most popular James Bond movie of all time, then definitely one of the top three. It has the largest actual and inflation-adjusted box office receipts ($1,108.6 and $943.5 million respectively) and is in the top 3 films in terms of profit (in this article, profit is box office minus budget, which is not entirely correct, but I did not find more detailed data on profit).",
+      "second-paragraph": "In addition to Skyfall, 1965's Thunderball and 1964's Goldfinger are in the top three, with 2005-adjusted box office receipts of $848.1 million and $820.4 million, respectively. Their estimated adjusted earnings were even slightly higher than Skyfall's, but since the earnings are \"estimated\" I thought it would be fair if popularity was decided according to the box office.",
+      "third-paragraph": "If we talk about the most unsuccessful films of the franchise, then there are two of them: \"Casino Royale\" in 1967 and \"License to Kill\" in 1989. But they weren't flops either. Each managed to collect about $ 190 million in profits adjusted for 2005, which is not bad at all."
+    },
+    "actor-box-office": {
+      "subheader": "Box office receipts per Bond actor (in 2005 dollars)",
+      "controller-total": "Total box office",
+      "controller-average": "Average per film",
+      "caption": "Box office receipts of all the actors who played James Bond. Click on the arc to see actor information.",
+      "first-paragraph": "It's hard to say for sure which of the 007 agents is the most popular. But there are two clear contenders for this title. Sean Connery has the highest combined box office but has appeared in more films than Daniel Craig while the latter has the highest average box office per film. I would declare a draw 😉.",
+      "second-paragraph": "Though it is safe to say that the least popular actor to play the British agent was David Niven. He appeared in only one film (1967 \"Casino Royale\"), and this film was second from the bottom in terms of the box office. David also has the lowest box office average."
+    }
+  }
+}
