@@ -6,10 +6,9 @@ import {Paragraph} from '@components/UI/Paragraph';
 
 export const TechnologyList: React.FC = () => (
   <>
-    <Subheader text="about.technologies" sx={{pt: 1, pb: 1}}/>
+    <Subheader text="about.technologies" />
     <List
       sx={{
-        p: 0,
         pl: 4,
         listStyleType: 'disc',
       }}

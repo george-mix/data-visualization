@@ -10,14 +10,12 @@ export const GoalList: React.FC = () => (
     <Subheader text="about.goals.subheader" />
     <List
       component={'ol'}
-      sx={{p: 0}}
     >
       {projectGoals.map((goal, index) => (
         <ListItem
           key={goal.title}
           sx={{
             flexWrap: 'wrap',
-            p: 0,
           }}
         >
           <Box
@@ -46,7 +44,7 @@ export const GoalList: React.FC = () => (
               }}
             />
           </Box>
-          <Paragraph text={goal.description} />
+          <Paragraph text={goal.description} sx={{flexBasis: '100%'}} />
         </ListItem>
       ))}
     </List>
