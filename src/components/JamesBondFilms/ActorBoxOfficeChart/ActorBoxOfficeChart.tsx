@@ -2,7 +2,7 @@ import React from 'react';
 import {useJamesBondData} from '@helpers/queries/useJamesBondData';
 import {SvgStatusProvider} from '@helpers/providers/SvgStatusProvider';
 import {useGetWikiThumbnailUrls} from '@helpers/queries/useGetWikiThumbnailUrls';
-import {ActorBoxOfficeSvg} from './ActorActorBoxOfficeSvg';
+import {ActorBoxOfficeSvg} from './ActorBoxOfficeSvg';
 import {ActorChartControls} from './ActorChartControls';
 import {ActorChartContextProvider} from './ActorChartContextProvider';
 
