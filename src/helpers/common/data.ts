@@ -55,7 +55,7 @@ export const technologyStackList = [
 
 export const lightThemePalette: AppPalette = {
   text: Colors.RichBlack,
-  background: Colors.Snow,
+  background: Colors.White,
   neutral: alpha(Colors.LiverChestnut, 0.3),
   primary: Colors.IndigoDye,
   secondary: Colors.PastelPink,

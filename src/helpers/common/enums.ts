@@ -44,6 +44,7 @@ export enum Colors {
   'TurtleBay' = '#82877c',
   'TurquoiseGreen' = '#a3d4b5',
   'UfoGreen' = '#00d261',
+  'White' = '#ffffff',
   'YellowOcher' = '#c38f3f',
 };
 
