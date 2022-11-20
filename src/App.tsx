@@ -1,11 +1,11 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
 import {TranslationProvider} from '@helpers/providers/TranslationProvider';
 import {StyleProvider} from '@helpers/providers/StyleProvider';
 import {ClientStateProvider} from '@helpers/providers/ClientStateProvider';
 import {SuspenseProvider} from '@helpers/providers/SuspenseProvider';
 import {AppLayout} from '@layouts/AppLayout';
 import {ServerStateProvider} from '@helpers/providers/ServerStateProvider';
+import {RouterProvider} from '@router/RouterProvider';
 
 const App: React.FC = () => (
   <ClientStateProvider>
@@ -13,9 +13,9 @@ const App: React.FC = () => (
       <StyleProvider>
         <SuspenseProvider>
           <TranslationProvider>
-            <Router>
+            <RouterProvider>
               <AppLayout />
-            </Router>
+            </RouterProvider>
           </TranslationProvider>
         </SuspenseProvider>
       </StyleProvider>

@@ -18,6 +18,9 @@ i18n
     detection: {
       caches: [],
     },
+    backend: {
+      loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`,
+    },
   });
 
 export const TranslationProvider: React.FC = ({children}) => (
