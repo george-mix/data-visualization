@@ -2,15 +2,17 @@ import React from 'react';
 import i18n from 'i18next';
 import {I18nextProvider, initReactI18next} from 'react-i18next';
 import HttpBackend from 'i18next-http-backend';
-import LanguageDetector from 'i18next-browser-languagedetector';
 import {SupportedLanguages} from '@helpers/common/enums';
+import {getItem} from '@helpers/services/localStorage';
 
 i18n
   .use(HttpBackend)
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     load: 'languageOnly',
+    lng: getItem('language')?.toLowerCase()
+      || window.navigator.language
+      || SupportedLanguages.English.toLowerCase(),
     fallbackLng: SupportedLanguages.English.toLowerCase(),
     interpolation: {
       escapeValue: false,
@@ -19,7 +21,7 @@ i18n
       caches: [],
     },
     backend: {
-      loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`,
+      loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/translation.json`,
     },
   });
 
