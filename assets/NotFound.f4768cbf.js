@@ -1,1 +1,0 @@
-import{j as r,B as n,a as o,T as a}from"./index.48276ea0.js";const e=()=>r(n,{children:[o(a,{component:"h1",variant:"h1",color:"primary.light",children:"404"}),o(a,{component:"h2",variant:"h2",color:"text.secondary",children:"Wrong page!"})]});export{e as default};
